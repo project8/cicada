@@ -20,7 +20,7 @@ pbuilder_prepare_project()
 # Cicada options #
 #################
 
-
+option( Cicada_ENABLE_KATYDID_NAMESPACE "Build an additional library with the Cicada classes defined additionally in the Katydid namespace" OFF )
   
 
 ######################
