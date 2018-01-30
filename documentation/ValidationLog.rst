@@ -63,4 +63,4 @@ Release Date: January 29, 2018
 
 New Features:
 '''''''''''''
-* Classes TProcessedTrackData and KTMultiTrackEventData defined across Katydid and Cicada namespaces
+* Classes TProcessedTrackData and TMultiTrackEventData defined across Katydid and Cicada namespaces
