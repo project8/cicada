@@ -7,6 +7,6 @@
 
 // Order of the include statements here should not be changed
 
-#include "CROOTData.hh"
+#include "KTROOTData.hh"
 
 #include "_CROOTData.cc"

@@ -9,7 +9,7 @@ cmake_minimum_required (VERSION 3.1)
 #########
 
 cmake_policy( SET CMP0048 NEW ) # version in project()
-project( Cicada VERSION 0.2.0 )
+project( Cicada VERSION 0.3.0 )
 
 list( APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/Scarab/cmake )
 include( PackageBuilder )
@@ -20,7 +20,7 @@ pbuilder_prepare_project()
 # Cicada options #
 #################
 
-
+option( Cicada_ENABLE_KATYDID_NAMESPACE "Build an additional library with the Cicada classes defined additionally in the Katydid namespace" OFF )
   
 
 ######################
