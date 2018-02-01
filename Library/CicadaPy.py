@@ -37,7 +37,7 @@ logger.debug("Import lib")
 path = os.path.join(os.path.dirname(
     os.path.abspath(__file__)), "lib")
 for afile in os.listdir(path):
-    if afile.endswith(".dylib",".so"):
+    if afile.endswith(".dylib") or afile.endswith(".so"):
         logger.debug("\t->{}".format(os.path.join(path, afile)))
         gSystem.Load(os.path.join(path, afile))
 
