@@ -42,7 +42,7 @@ namespace NAMESPACE
 
             mv_accessible(Bool_t, IsCut);
 
-            mv_accessible(Double_t, StartTimeInRunC); /**< Start time of the track in the entire run processed by Katydid. */
+            mv_accessible(Double_t, StartTimeInRunC);
             mv_accessible(Double_t, StartTimeInAcq);
             mv_accessible(Double_t, EndTimeInRunC);
             mv_accessible(Double_t, TimeLength);
