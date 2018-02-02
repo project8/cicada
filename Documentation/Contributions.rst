@@ -15,12 +15,21 @@ If you are new to the code and are willing to contribute by developing new featu
 There are issues you can look at and decide to solve.
 When you have found your ideal issue, please comment in the issue tracker, so the main developers are aware you are working on this.
 
-If you wish to contribute to maintaining a proper documentation, please refer to the :ref:`Documentation` section.
+If you wish to contribute to maintaining a proper documentation, please refer to the Documentation section.
 
+.. _Documentation:
 
 Documentation
 ~~~~~~~~~~~~~
 
+The documentation of Cicada happens at several levels:
+- in the `Documentation`_ folder, we maintain RST files.
+With each release of the code, ReadTheDocs reads these files and produces pages (such as this one).
+- inside the code, documentation is provided as comments and Doxygen headers.
+Once compiled by ReadTheDocs, it produces the 
+
+This documentation
 
 
-.. `_issue tracker` https://github.com/project8/cicada/issues
+.. _issue tracker: https://github.com/project8/cicada/issues
+.. _Documentation: https://github.com/project8/cicada/tree/master/Documentation
