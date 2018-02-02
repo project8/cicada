@@ -14,8 +14,8 @@ Additional documentations can be found [here](https://project8.org/p8-cicada).
 
 ## Repository content
 
- - **documentation:** contains the repository documentation that gets built on [RTD](http://p8-cicada.readthedocs.io/en/stable/)
- - **Library:** contains the headers and ccp files of the repository
+ - **documentation:** contains the repository documentation that gets built on [RTD](http://p8-cicada.readthedocs.io/en/stable/).
+ - **Library:** contains the headers and ccp files of the repository.
  - **Scarab:** [Scarab](https://github/project8/scarab) submodule.
 
 ## Operating System Support

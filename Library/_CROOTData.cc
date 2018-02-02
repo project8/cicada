@@ -1,10 +1,7 @@
-/*
- * KTROOTData.cc
- *
- *  Created on: Aug 4, 2014
- *      Author: nsoblath
- *
- *  NOTE: this file is not meant to be used by itself.  It should be included in another file that has previously included the proper header file (see note in _CROOTData.hh).
+/**
+ @file _CROOTData.cc
+ @author: N. S. Oblath
+ @date: Jan 15, 2018
  */
 
 #include "logger.hh"

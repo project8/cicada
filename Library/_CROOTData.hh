@@ -1,10 +1,9 @@
-/*
- * _CROOTData.hh
- *
- *  Created on: Jan 15, 2018
- *      Author: nsoblath
- *
- *  NOTE: this file was not meant to be used by itself.  It should be included in another file with proper include guards and a definition of NAMESPACE
+/**
+ @file _CROOTData.hh
+ @brief Contains TProcessedTrackData and TMultiTrackEventData
+ @details This file was not meant to be used by itself.  It should be included in another file with proper include guards and a definition of NAMESPACE
+ @author: N. S. Oblath
+ @date: Jan 15, 2018
  */
 
 #define set_prefix Set
@@ -20,11 +19,18 @@ class TClonesArray;
 
 namespace NAMESPACE
 {
-    //***********************
-    // TProcessedTrackData
-    //***********************
 
-    //class KTProcessedTrackData;
+   /*!
+     @class TProcessedTrackData
+     @author N. S. Oblath
+
+     @brief Contains the definition of the branches saved in the Katydid output for the processed tracks
+
+     @details
+     The branches of the processed tracks object saved as a Katydid output in a ROOT file are defined in this class.
+     A TProcessedTrackData object contains the characteristics (such as identifications numbers, the start/end time and frequency, the slope and intercept) of the tracks detected by the event reconstruction.
+     The mv_accessible macros creates public class members and public Get and Set methods (e.g. SetVariable(type, value)).
+    */
 
     class TProcessedTrackData : public TObject
     {
@@ -71,11 +77,17 @@ namespace NAMESPACE
             ClassDef(TProcessedTrackData, 1);
     };
 
-    //************************
-    // TMultiTrackEventData
-    //************************
+   /*!
+     @class TProcessedTrackData
+     @author N. S. Oblath
 
-    //class KTMultiTrackEventData;
+     @brief Contains the definition of the branches saved in the Katydid output for the processed event
+
+     @details
+     The branches of the processed events object saved as a Katydid output in a ROOT file are defined in this class.
+     A TMultiTrackEventData object contains the characteristics of the reconstructed events as long as the tracks (via TProcessedTracks objects) associated to each event.
+     The mv_accessible macros creates public class members and public Get and Set methods (e.g. SetVariable(type, value)).
+    */
 
     class TMultiTrackEventData : public TObject
     {
