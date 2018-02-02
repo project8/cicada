@@ -46,7 +46,6 @@ os.environ['DOXYGEN_INPUT'] = 'DoxFiles ../Library'
 os.environ['DOXYGEN_EXCLUDE'] = ''
 # directories outside of DOXYGEN_INPUT that you want the C preprocessor to look in for macro definitions (e.g. if there's a submodule not included that has relevant macros); string with space-separated directories
 os.environ['PREPROC_INCLUDE_PATH'] = '../Scarab/library/utility ../Scarab/library/logger'
-os.environ['EXPAND_AS_DEFINED'] = 'mv_accessible_3'
 
 # Doxygen
 call(['doxygen', '../Scarab/documentation/cpp/Doxyfile'])

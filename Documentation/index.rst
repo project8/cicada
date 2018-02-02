@@ -7,7 +7,7 @@ Contents:
    :maxdepth: 2
 
    Introduction
-   ObjectsContent
+   ObjectsStructure
    Versions
    Contributions
    ValidationLog
