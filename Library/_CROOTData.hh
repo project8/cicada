@@ -24,11 +24,11 @@ namespace NAMESPACE
      @class TProcessedTrackData
      @author N. S. Oblath
 
-     @brief Contains the definition of the branches saved in the Katydid output for the processed tracks
+     @brief Contains the definition of the branches saved in the Katydid output for a processed track
 
      @details
      The branches of the processed tracks object saved as a Katydid output in a ROOT file are defined in this class.
-     A TProcessedTrackData object contains the characteristics (such as identifications numbers, the start/end time and frequency, the slope and intercept) of the tracks detected by the event reconstruction.
+     A TProcessedTrackData object contains the characteristics (such as identifications numbers, the start/end time and frequency, the slope and intercept) of a track detected by the event reconstruction.
      The mv_accessible macros creates public class members and public Get and Set methods (e.g. SetVariable(type, value)).
     */
 
@@ -65,7 +65,6 @@ namespace NAMESPACE
 
         public:
             TProcessedTrackData();
-            //TProcessedTrackData(const KTProcessedTrackData& data);
             TProcessedTrackData(const TProcessedTrackData& orig);
             virtual ~TProcessedTrackData();
             TObject* Clone(const char* newname="");
@@ -81,7 +80,7 @@ namespace NAMESPACE
      @class TMultiTrackEventData
      @author N. S. Oblath
 
-     @brief Contains the definition of the branches saved in the Katydid output for the processed event
+     @brief Contains the definition of the branches saved in the Katydid output for a processed event
 
      @details
      The branches of the processed events object saved as a Katydid output in a ROOT file are defined in this class.
@@ -126,11 +125,10 @@ namespace NAMESPACE
             TClonesArray* GetTracks() {return fTracks;}
 
         private:
-            TClonesArray* fTracks; //->
+            TClonesArray* fTracks; /**< Contains all the processed tracks informations  (a.k.a. TProcessedTracksData object) for an event . */
 
         public:
             TMultiTrackEventData();
-            //TMultiTrackEventData(const KTMultiTrackEventData& data);
             TMultiTrackEventData(const TMultiTrackEventData& orig);
             virtual ~TMultiTrackEventData();
             TObject* Clone(const char* newname="");
