@@ -29,7 +29,7 @@ namespace NAMESPACE
      @details
      The branches of the processed tracks object saved as a Katydid output in a ROOT file are defined in this class.
      A TProcessedTrackData object contains the characteristics (such as identifications numbers, the start/end time and frequency, the slope and intercept) of a track detected by the event reconstruction.
-     The mv_accessible macros creates public class members and public Get and Set methods (e.g. SetVariable(type, value)).
+     The mv_accessible macros creates public class members and public Get and Set methods (e.g. SetVariable(value)).
     */
 
     class TProcessedTrackData : public TObject
@@ -85,7 +85,7 @@ namespace NAMESPACE
      @details
      The branches of the processed events object saved as a Katydid output in a ROOT file are defined in this class.
      A TMultiTrackEventData object contains the characteristics of the reconstructed events as long as the tracks (via TProcessedTracks objects) associated to each event.
-     The mv_accessible macros creates public class members and public Get and Set methods (e.g. SetVariable(type, value)).
+     The mv_accessible macros creates public class members and public Get and Set methods (e.g. SetVariable(value)).
     */
 
     class TMultiTrackEventData : public TObject

@@ -20,7 +20,7 @@ Additional documentations can be found [here](https://project8.org/p8-cicada).
 
 ## Operating System Support
 
-* Mac OS X (usually tested on OS X 10.10 and 10.11)
+* Mac OS X (usually tested on OS X 10.12 and 10.13)
 * Linux (usually tested on Debian Jessie and Scientific Linux 6)
 
 ## Requirements
