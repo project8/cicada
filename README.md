@@ -10,11 +10,11 @@ Their nature should be very close to [TTree](https://root.cern.ch/root-trees) ob
 
 ## Documentation
 
-Additional documentations can be found [here](https://project8.org/p8-cicada).
+Additional documentations can be found [here](https://www.project8.org/cicada).
 
 ## Repository content
 
- - **documentation:** contains the repository documentation that gets built on [RTD](http://p8-cicada.readthedocs.io/en/stable/).
+ - **documentation:** contains the repository documentation that gets built on [RTD](https://www.project8.org/cicada).
  - **Library:** contains the headers and ccp files of the repository.
  - **Scarab:** [Scarab](https://github/project8/scarab) submodule.
 
