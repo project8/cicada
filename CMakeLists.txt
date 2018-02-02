@@ -1,5 +1,6 @@
 # CMakeLists for Cicada
 # Author: N. Oblath
+# Date: Jan 15, 2018
 
 # Minimum cmake verison 3.1 required for the variable CMAKE_CXX_STANDARD
 cmake_minimum_required (VERSION 3.1)
