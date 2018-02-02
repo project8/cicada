@@ -34,7 +34,7 @@ namespace NAMESPACE
 
     class TProcessedTrackData : public TObject
     {
-            mv_accessible(UInt_t, Component);
+            mv_accessible(UInt_t, Component); 
             mv_accessible(UInt_t, AcquisitionID);
             mv_accessible(UInt_t, TrackID);
             mv_accessible(UInt_t, EventID);
@@ -42,7 +42,7 @@ namespace NAMESPACE
 
             mv_accessible(Bool_t, IsCut);
 
-            mv_accessible(Double_t, StartTimeInRunC);
+            mv_accessible(Double_t, StartTimeInRunC); /**< Start time of the track in the entire run processed by Katydid. */
             mv_accessible(Double_t, StartTimeInAcq);
             mv_accessible(Double_t, EndTimeInRunC);
             mv_accessible(Double_t, TimeLength);
@@ -125,7 +125,7 @@ namespace NAMESPACE
             TClonesArray* GetTracks() {return fTracks;}
 
         private:
-            TClonesArray* fTracks; /**< Contains all the processed tracks informations  (a.k.a. TProcessedTracksData object) for an event . */
+            TClonesArray* fTracks; /**< Contains all the processed tracks informations (a.k.a. TProcessedTracksData object) for an event. */
 
         public:
             TMultiTrackEventData();
