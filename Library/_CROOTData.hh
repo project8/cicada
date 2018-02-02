@@ -34,7 +34,7 @@ namespace NAMESPACE
 
     class TProcessedTrackData : public TObject
     {
-            mv_accessible(UInt_t, Component, some comment); 
+            mv_accessible_3(UInt_t, Component, some comment); 
             mv_accessible(UInt_t, AcquisitionID);
             mv_accessible(UInt_t, TrackID);
             mv_accessible(UInt_t, EventID);
@@ -42,7 +42,7 @@ namespace NAMESPACE
 
             mv_accessible(Bool_t, IsCut);
 
-            mv_accessible(Double_t, StartTimeInRunC, !< Brief description after the member);
+            mv_accessible_3(Double_t, StartTimeInRunC, !< Brief description after the member);
             mv_accessible(Double_t, StartTimeInAcq);
             mv_accessible(Double_t, EndTimeInRunC);
             mv_accessible(Double_t, TimeLength);
