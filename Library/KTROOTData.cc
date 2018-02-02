@@ -1,7 +1,7 @@
 /**
  @file KROOTData.cc
- @author: N. S. Oblath
- @date: Jan 15, 2018
+ @author N. S. Oblath
+ @date Jan 15, 2018
  */
 
 // Order of the include statements here should not be changed

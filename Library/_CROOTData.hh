@@ -2,8 +2,8 @@
  @file _CROOTData.hh
  @brief Contains TProcessedTrackData and TMultiTrackEventData
  @details This file was not meant to be used by itself.  It should be included in another file with proper include guards and a definition of NAMESPACE
- @author: N. S. Oblath
- @date: Jan 15, 2018
+ @author N. S. Oblath
+ @date Jan 15, 2018
  */
 
 #define set_prefix Set
@@ -78,7 +78,7 @@ namespace NAMESPACE
     };
 
    /*!
-     @class TProcessedTrackData
+     @class TMultiTrackEventData
      @author N. S. Oblath
 
      @brief Contains the definition of the branches saved in the Katydid output for the processed event
