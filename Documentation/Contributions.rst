@@ -14,7 +14,7 @@ Development scheme, code testing et release procedure
 Development scheme
 ------------------
 
-The Project 8 collaboration has adopted the `Git flow`_ development scheme: you can find details and the correct git commands about how to use it on this `page`_.
+The Project 8 collaboration has adopted the Git flow development scheme: you can find details and the correct git commands about how to use it on this `page`_.
 For a more visual way of developing code, the use of the `SourceTree`_ application is recommended as it natively integrates the Git flow scheme.
 
 Code testing with Docker
