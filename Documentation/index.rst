@@ -7,6 +7,7 @@ Contents:
    :maxdepth: 2
 
    Introduction
+   GettingStarted
    ObjectsStructure
    Versions
    Contributions
