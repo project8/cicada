@@ -1,4 +1,4 @@
-Objects structure and description
+Objects' structure and description
 ========================================
 
 Here is described the content and associated description of the Cicada objects.
