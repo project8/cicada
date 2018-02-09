@@ -54,8 +54,10 @@ include_directories (${ROOT_INCLUDE_DIR})
 
 include_directories (BEFORE 
     ${PROJECT_SOURCE_DIR}/Library
+    ${PROJECT_SOURCE_DIR}/Executables
 )
 
 add_subdirectory( Library )
+add_subdirectory( Executables )
 
 pbuilder_variables_for_parent()
