@@ -18,7 +18,7 @@ Guidelines
 Log
 ---
 
-Version: *Upcoming Releases*
+Version: 0.4.0
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Release Date: TBD
@@ -26,6 +26,9 @@ Release Date: TBD
 
 New Features:
 '''''''''''''
+
+* Python interface via ```import CicadaPy``` after installation #2
+* Dockerfile
   
 Fixes:
 ''''''

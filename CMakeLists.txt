@@ -21,7 +21,8 @@ pbuilder_prepare_project()
 # Cicada options #
 #################
 
-option( Cicada_ENABLE_KATYDID_NAMESPACE "Build an additional library with the Cicada classes defined additionally in the Katydid namespace" OFF )
+option( Cicada_ENABLE_KATYDID_NAMESPACE "Build an additional library with the Cicada classes defined additionally in the Katydid namespace" ON )
+option (Cicada_ADD_CICADA_PY "Add PhylloxeraPy file in the build" ON )
   
 
 ######################
@@ -54,8 +55,16 @@ include_directories (${ROOT_INCLUDE_DIR})
 
 include_directories (BEFORE 
     ${PROJECT_SOURCE_DIR}/Library
+    ${PROJECT_SOURCE_DIR}/Executables
 )
 
 add_subdirectory( Library )
+add_subdirectory( Executables )
+
+IF (Cicada_ADD_CICADA_PY)
+    pbuilder_install_files (. ${PROJECT_SOURCE_DIR}/Library/CicadaPy.py "")
+    pbuilder_install_files (. ${PROJECT_SOURCE_DIR}/Library/Python/__init__.py "")
+    pbuilder_install_files (. ${PROJECT_SOURCE_DIR}/Library/Python/ReadKTOutputFile.py "")
+ENDIF(Cicada_ADD_CICADA_PY)
 
 pbuilder_variables_for_parent()
