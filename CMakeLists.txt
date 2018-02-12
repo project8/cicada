@@ -62,7 +62,9 @@ add_subdirectory( Library )
 add_subdirectory( Executables )
 
 IF (Cicada_ADD_CICADA_PY)
+    pbuilder_install_files (. ${PROJECT_SOURCE_DIR}/Library/__init__.py "")
     pbuilder_install_files (. ${PROJECT_SOURCE_DIR}/Library/CicadaPy.py "")
+    pbuilder_install_files (. ${PROJECT_SOURCE_DIR}/Library/ReadKTOutputFile.py "")
 ENDIF(Cicada_ADD_CICADA_PY)
 
 pbuilder_variables_for_parent()

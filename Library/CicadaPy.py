@@ -41,13 +41,13 @@ for afile in os.listdir(path):
         logger.debug("\t->{}".format(os.path.join(path, afile)))
         gSystem.Load(os.path.join(path, afile))
 
-logger.debug("Include headers")
-gInterpreter.AddIncludePath("{}".format(os.path.join(os.path.dirname(os.path.abspath(__file__)), "include/Cicada/Scarab")))
+# logger.debug("Include headers")
+# gInterpreter.AddIncludePath("{}".format(os.path.join(os.path.dirname(os.path.abspath(__file__)), "include/Cicada/Scarab")))
 
-path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "include/Cicada")
-for afile in os.listdir(path):
-    if afile.endswith(".hh"):
-        logger.debug("\t->{}".format(os.path.join(path, afile)))
-        gInterpreter.ProcessLine('#include "{}"'.format(os.path.join(path, afile)))
+# path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "include/Cicada")
+# for afile in os.listdir(path):
+#     if afile.endswith(".hh"):
+#         logger.debug("\t->{}".format(os.path.join(path, afile)))
+#         gInterpreter.ProcessLine('#include "{}"'.format(os.path.join(path, afile)))
 
 logger.info("All set!")
