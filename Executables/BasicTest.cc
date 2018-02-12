@@ -18,7 +18,12 @@
 LOGGER(bt, "BasicTest");
 
 int main(int argc, char *argv[]){
-	LINFO(bt,"Reading file:\t"<< argv[1]);
+	// Testing the number of arguments
+	if (argc<2) {
+		LERROR(bt,"No argument provided; exiting...");
+		return 1;
+	}
+	LINFO(bt, "Reading file:\t" << argv[1]);
 
 	TFile* myFile = new TFile(argv[1], "READ");
 	TTree* myTree;
