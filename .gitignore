@@ -29,3 +29,5 @@ install_manifest.txt
 
 # from emacs
 *~
+tmp
+*.pyc
