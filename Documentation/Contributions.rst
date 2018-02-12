@@ -27,14 +27,14 @@ Release procedure
 
 When making a release or a hotfix, several steps shall be done:
 
-- update the documentation (see Documentation section)
-- update the project number in the top CMakeLists.txt file
-- update the authors lists (if applicable)
-- update the Documentation/ValidationLog.rst file
+* update the documentation (see Documentation section)
+* update the project number in the top CMakeLists.txt file
+* update the authors lists (if applicable)
+() update the Documentation/ValidationLog.rst file
 
 After making the release:
 
-- create a `release`_ entry on Github and add the corresponding entry from the ValidationLog.rst file
+* create a `release`_ entry on Github and add the corresponding entry from the ValidationLog.rst file
 
 Contributing to the code
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -50,12 +50,12 @@ Documentation
 
 The documentation of Cicada happens at several levels:
 
-- in the repository, we maintain README.md files describing the content of each folder.
-- in the `Documentation`_ folder, we maintain RST files.
+* in the repository, we maintain README.md files describing the content of each folder.
+* in the `Documentation`_ folder, we maintain RST files.
   With each release of the code, ReadTheDocs reads these files and produces pages (such as this one).
-- inside the code, documentation is provided as comments and Doxygen headers.
+* inside the code, documentation is provided as comments and Doxygen headers.
   Once compiled by ReadTheDocs, it produces a proper `Doxygen documentation`_ of the code.
-- a ValidationLog.rst file keeps track of the new features or fixes added to the code.
+* a ValidationLog.rst file keeps track of the new features or fixes added to the code.
   For each Github issue solved, a entry describing the solved issue (and its Github number) should be added in the upcoming release subsection.
 
 This documentation must be updated at any release/hotfix/pull-request to keep the repository as up-to-date as possible.
