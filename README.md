@@ -10,7 +10,7 @@ Their nature should be very close to [TTree](https://root.cern.ch/root-trees) ob
 
 ## Documentation
 
-Additional documentations can be found [here](https://www.project8.org/cicada).
+Additional documentation can be found [here](https://www.project8.org/cicada).
 
 ## Repository content
 
