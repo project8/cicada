@@ -1,6 +1,5 @@
 Contributions
 =============
- 
 
 Reporting bugs
 ~~~~~~~~~~~~~~
@@ -25,12 +24,19 @@ If you would like to modify your local installation of Cicada (to add features o
 * Clone and pull the latest master version of Cicada
 * Inside the cicada folder, execute 
 ::
-  docker-compose run Cicada 
-A new terminal prompter (for example, root@413ab10d7a8f:) should appear. You may make changes to Cicada either inside or outside of the Docker container. 
+    docker build -t cicada . 
+    docker run -it cicada bash 
+A new terminal prompter (for example, `root@413ab10d7a8f:`) should appear. 
+Then you have to load the environment:
+::
+    source /setup.py
+
+You may make changes to Cicada either inside or outside of the Docker container. 
 If you wish to work outside of the container, you will need to mount a local folder in the container (see Docker documentation).
+
 You can remove the container image using 
 :: 
-  docker rmi Cicada_Cicada
+    docker rmi Cicada_Cicada
 
 Release procedure
 -----------------
