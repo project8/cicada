@@ -23,10 +23,12 @@ def ReadKTOutputFile(filename,var):
     # Create object TMultiTrackEventData to "point" to the object "Event" in the tree
     multiTrackEvents = TTreeReaderValue(KT.TMultiTrackEventData)(treeReader, "Event")
 
-    function = "print(multiTrackEvents.Get{}())".format(var)
+    resultList = []
     # Go through the events
     while treeReader.Next():
-        exec(function)
+        exec("resultList.append(multiTrackEvents.Get{}())\n".format(var))
+        print(resultList[-1])
+    return resultList
 
 if __name__ =="__main__":
     print('\n P8 Katydid output file reader example\n')

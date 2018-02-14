@@ -29,6 +29,7 @@ New Features:
 
 * Python interface via ```import CicadaPy``` after installation #2
 * Dockerfile
+* A proper documentation
   
 Fixes:
 ''''''
@@ -37,7 +38,7 @@ Version: v0.3.0
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Release Date: January 29, 2018
-'''''''''''''''''
+''''''''''''''''''''''''''''''
 
 New Features:
 '''''''''''''
