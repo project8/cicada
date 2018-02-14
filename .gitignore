@@ -31,3 +31,8 @@ install_manifest.txt
 *~
 tmp
 *.pyc
+
+# Documentation with sphinx
+Documentation/_build
+Documentation/_static
+Documentation/user_doxygen_out
