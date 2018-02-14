@@ -6,10 +6,10 @@ Reporting bugs
 ~~~~~~~~~~~~~~
 
 You can report bugs using the Cicada `issue tracker`_. 
-When doing so, please provide your configuration (gcc, cmake and ROOT versions) and a detailed description of the steps to reproduce the bug.
+When doing so, please provide your configuration (gcc, cmake and ROOT versions, virtual environment) and a detailed description of the steps to reproduce the bug.
 
 Development scheme, code testing et release procedure
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Development scheme
 ------------------
@@ -20,7 +20,16 @@ For a more visual way of developing code, the use of the `SourceTree`_ applicati
 Code testing with Docker
 ------------------------
 
-TODO_DOC 
+If you would like to modify your local installation of Cicada (to add features or resolve any bugs), we recommend you use a Docker container instead of a python virtual environment. To do so:
+* Install Docker: https://docs.docker.com/engine/installation/
+* Clone and pull the latest master version of Cicada
+* Inside the morpho folder, execute 
+::
+  docker-compose run Cicada 
+A new terminal prompter (for example, root@413ab10d7a8f:) should appear. You may make changes to Cicada either inside or outside of the Docker container. If you wish to work outside of the container, move morpho to the morpho_share directory that is mounted under a /host folder.
+You can remove the container image using 
+:: 
+  docker rmi Cicada_Cicada.
 
 Release procedure
 -----------------
@@ -30,7 +39,7 @@ When making a release or a hotfix, several steps shall be done:
 * update the documentation (see Documentation section)
 * update the project number in the top CMakeLists.txt file
 * update the authors lists (if applicable)
-() update the Documentation/ValidationLog.rst file
+* update the Documentation/ValidationLog.rst file
 
 After making the release:
 
