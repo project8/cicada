@@ -7,9 +7,10 @@ ADD . /cicada
 RUN /bin/bash -c "source /setup.sh &&\
     mkdir /cicada/build &&\
     cd /cicada/build &&\
-    which cmake &&\
-    cmake -DCMAKE_INSTALL_PREFIX:PATH=/build .. &&\
-    make -j4 &&\
-    make install"
+    cmake -D CMAKE_INSTALL_PREFIX=/build .. &&\
+    make -j install &&\
+    make install &&\
+    pip3 install colorlog &&\
+    cat /setup_cicada.sh    "   
 
-CMD ['source /setup.sh']
+CMD ['source /setup_cicada.sh']
