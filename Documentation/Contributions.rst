@@ -20,16 +20,17 @@ For a more visual way of developing code, the use of the `SourceTree`_ applicati
 Code testing with Docker
 ------------------------
 
-If you would like to modify your local installation of Cicada (to add features or resolve any bugs), we recommend you use a Docker container instead of a python virtual environment. To do so:
+If you would like to modify your local installation of Cicada (to add features or resolve any bugs), we recommend you use a Docker container as a uniform test bench. To do so:
 * Install Docker: https://docs.docker.com/engine/installation/
 * Clone and pull the latest master version of Cicada
-* Inside the morpho folder, execute 
+* Inside the cicada folder, execute 
 ::
   docker-compose run Cicada 
-A new terminal prompter (for example, root@413ab10d7a8f:) should appear. You may make changes to Cicada either inside or outside of the Docker container. If you wish to work outside of the container, move morpho to the morpho_share directory that is mounted under a /host folder.
+A new terminal prompter (for example, root@413ab10d7a8f:) should appear. You may make changes to Cicada either inside or outside of the Docker container. 
+If you wish to work outside of the container, you will need to mount a local folder in the container (see Docker documentation).
 You can remove the container image using 
 :: 
-  docker rmi Cicada_Cicada.
+  docker rmi Cicada_Cicada
 
 Release procedure
 -----------------
