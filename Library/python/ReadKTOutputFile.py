@@ -5,6 +5,7 @@ Example of how to open and read a Katydid output file.
 '''
 
 import CicadaPy
+CicadaPy.loadLibraries()
 
 import ROOT.Katydid as KT
 from ROOT import TFile, TTreeReader, TTreeReaderValue

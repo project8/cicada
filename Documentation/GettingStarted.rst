@@ -49,6 +49,7 @@ An example on how to read a Katydid object is present in `Library/python`.
 The core of this scripts is:
 ::
     import CicadaPy
+    CicadaPy.loadLibraries()
 
     import ROOT.Katydid as KT
     from ROOT import TFile, TTreeReader, TTreeReaderValue
@@ -74,7 +75,7 @@ The core of this scripts is:
             print(resultList[-1])
         return resultList
 
-1. The first line adds the Cicada libraries into the ROOT module, so they can be imported by the second import.
+1. The first two lines add the Cicada libraries into the ROOT module, so they can be imported by the second import.
 Note that here we call `ROOT.Katydid` and not `ROOT.Cicada`: we are using the `Katydid` namespace that was added to ROOT. 
 One day once the Cicada library will be used as a dependency of Katydid, we will use `ROOT.Cicada`.
 
