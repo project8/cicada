@@ -27,7 +27,8 @@ def ReadKTOutputFile(filename,var):
     resultList = []
     # Go through the events
     while treeReader.Next():
-        exec("resultList.append(multiTrackEvents.Get{}())\n".format(var))
+        function = getattr(multiTrackEvents,"Get{}".format(var))
+        resultList.append(function())
         print(resultList[-1])
     return resultList
 
