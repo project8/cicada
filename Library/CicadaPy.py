@@ -1,6 +1,6 @@
 
 import os
-from ROOT import gSystem 
+from ROOT import gSystem
 import logging
 import colorlog
 
