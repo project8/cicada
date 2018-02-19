@@ -29,7 +29,7 @@ If you would like to modify your local installation of Cicada (to add features o
 A new terminal prompter (for example, `root@413ab10d7a8f:`) should appear. 
 Then you have to load the environment:
 ::
-    source /setup.py
+    source /setup_cicada.sh
 
 You may make changes to Cicada either inside or outside of the Docker container. 
 If you wish to work outside of the container, you will need to mount a local folder in the container (see Docker documentation).

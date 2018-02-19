@@ -10,7 +10,7 @@ cmake_minimum_required (VERSION 3.1)
 #########
 
 cmake_policy( SET CMP0048 NEW ) # version in project()
-project( Cicada VERSION 0.3.0 )
+project( Cicada VERSION 0.4.0 )
 
 list( APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/Scarab/cmake )
 include( PackageBuilder )
@@ -55,11 +55,9 @@ include_directories (${ROOT_INCLUDE_DIR})
 
 include_directories (BEFORE 
     ${PROJECT_SOURCE_DIR}/Library
-    ${PROJECT_SOURCE_DIR}/Executables
 )
 
 add_subdirectory( Library )
-add_subdirectory( Executables )
 
 IF (Cicada_ADD_CICADA_PY)
     pbuilder_install_files (. ${PROJECT_SOURCE_DIR}/Library/CicadaPy.py "")
