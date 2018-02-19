@@ -29,3 +29,10 @@ install_manifest.txt
 
 # from emacs
 *~
+tmp
+*.pyc
+
+# Documentation with sphinx
+Documentation/_build
+Documentation/_static
+Documentation/user_doxygen_out

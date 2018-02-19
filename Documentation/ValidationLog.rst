@@ -14,6 +14,37 @@ Guidelines
   * Perform tests to show that the fix solves the problem that had been indicated.
   * Perform tests to show that the fix does not cause other problems.
   * Indicate in this log what tests were performed and how you know the problem was fixed.
+
+Log
+---
+
+Version: 0.4.0
+~~~~~~~~~~~~~~
+
+Release Date: February 14, 2018
+'''''''''''''''''''''''''''''''
+
+New Features:
+'''''''''''''
+
+* Python interface via ```import CicadaPy``` after installation #2
+* Dockerfile
+* A proper documentation
+  
+Fixes:
+''''''
+
+Version: v0.3.0
+~~~~~~~~~~~~~~~
+
+Release Date: January 29, 2018
+''''''''''''''''''''''''''''''
+
+New Features:
+'''''''''''''
+* Classes TProcessedTrackData and TMultiTrackEventData defined across Katydid and Cicada namespaces
+
+
   
 Template
 --------
@@ -40,27 +71,3 @@ Fixes:
 * Fix 2
     * Details
   
-Log
----
-
-Version: *Upcoming Releases*
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Release Date: TBD
-'''''''''''''''''
-
-New Features:
-'''''''''''''
-  
-Fixes:
-''''''
-
-Version: v0.3.0
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Release Date: January 29, 2018
-'''''''''''''''''
-
-New Features:
-'''''''''''''
-* Classes TProcessedTrackData and TMultiTrackEventData defined across Katydid and Cicada namespaces
