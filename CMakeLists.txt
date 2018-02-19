@@ -55,11 +55,9 @@ include_directories (${ROOT_INCLUDE_DIR})
 
 include_directories (BEFORE 
     ${PROJECT_SOURCE_DIR}/Library
-    ${PROJECT_SOURCE_DIR}/Executables
 )
 
 add_subdirectory( Library )
-add_subdirectory( Executables )
 
 IF (Cicada_ADD_CICADA_PY)
     pbuilder_install_files (. ${PROJECT_SOURCE_DIR}/Library/CicadaPy.py "")
