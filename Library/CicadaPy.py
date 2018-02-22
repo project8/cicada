@@ -26,9 +26,24 @@ def print_logo():
 \___/_/\___/\__,_/\__,_/\__,_/  \n')
 
 
-def loadLibraries():
-    print_logo()
-    logger.debug("Import lib")
+
+def loadLibraries(silence=False):
+    import ROOT
+    if hasattr(ROOT,"Cicada"):
+        logger.debug("Libraries already loaded...")
+        return
+    if silence:
+        print_logo()        
+        from ROOT import RooMsgService
+        RooMsgService.instance().setSilentMode(True)
+        RooMsgService.instance().setGlobalKillBelow(5)
+        logger.setLevel(logging.INFO)
+    else:
+        # print_image()
+        print_logo()
+
+    from ROOT import gSystem, gInterpreter
+    logger.debug("Import libraries...")
     path = os.path.join(os.path.dirname(
         os.path.abspath(__file__)), "lib")
     for afile in os.listdir(path):
@@ -36,16 +51,4 @@ def loadLibraries():
             logger.debug("\t->{}".format(os.path.join(path, afile)))
             gSystem.Load(os.path.join(path, afile))
 
-    # logger.debug("Include headers")
-    # gInterpreter.AddIncludePath("{}".format(os.path.join(os.path.dirname(os.path.abspath(__file__)), "include/Cicada/Scarab")))
-
-    # path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "include/Cicada")
-    # for afile in os.listdir(path):
-    #     if afile.endswith(".hh"):
-    #         logger.debug("\t->{}".format(os.path.join(path, afile)))
-    #         gInterpreter.ProcessLine('#include "{}"'.format(os.path.join(path, afile)))
-
     logger.info("All set!")
-
-if __name__=="__main__":
-    loadLibraries()
