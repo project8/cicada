@@ -123,6 +123,7 @@ namespace NAMESPACE
 
         public:
             TClonesArray* GetTracks() {return fTracks;}
+            const TClonesArray* GetTracks() const {return fTracks;}
 
         private:
             TClonesArray* fTracks; /**< Contains all the processed tracks informations (a.k.a. TProcessedTracksData object) for an event. */
