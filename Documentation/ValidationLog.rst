@@ -18,6 +18,21 @@ Guidelines
 Log
 ---
 
+Version: 0.4.1
+~~~~~~~~~~~~~~
+
+Release Date: February 22, 2018
+'''''''''''''''''''''''''''''''
+
+New Features:
+'''''''''''''
+
+Fixes:
+''''''
+
+* Add const return of the Tracks TClonesArray in TMultiTrackEventData.
+
+
 Version: 0.4.0
 ~~~~~~~~~~~~~~
 
