@@ -113,8 +113,9 @@ namespace NAMESPACE
             fFirstTrackID(0), fFirstTrackTimeLength(0.), fFirstTrackFrequencyWidth(0.), fFirstTrackSlope(0.), fFirstTrackIntercept(0.), fFirstTrackTotalPower(0.),
             fUnknownEventTopology(false)
     {
+        static const std::string className = std::string(TOSTRING(NAMESPACE)) + "::TProcessedTrackData";
         // this cannot be initialized in the initializer list because ROOT
-        fTracks = new TClonesArray("Katydid::TProcessedTrackData", 20);
+        fTracks = new TClonesArray(className.c_str(), 20);
     }
 
     TMultiTrackEventData::TMultiTrackEventData(const TMultiTrackEventData& orig) :
