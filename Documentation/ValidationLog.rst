@@ -18,6 +18,21 @@ Guidelines
 Log
 ---
 
+Version: 0.4.2
+~~~~~~~~~~~~~~
+
+Release Date: March 14, 2018
+'''''''''''''''''''''''''''''''
+
+New Features:
+'''''''''''''
+
+Fixes:
+''''''
+
+* Fixed the namespace in the constructor for the Tracks TClonesArray in TMultiTrackEventData.
+
+
 Version: 0.4.1
 ~~~~~~~~~~~~~~
 
