@@ -5,6 +5,9 @@
 
 set( CICADA_DICT_HEADERFILES
     _CROOTData.hh
+    CClassifiedEventData.hh
+    CClassifierResultsData.hh
+    CProcessedMPTData.hh
     CROOTData.hh
 )
 
@@ -13,6 +16,9 @@ set( CICADA_HEADERFILES
 )
 
 set( CICADA_SOURCEFILES
+    CClassifiedEventData.cc
+    CClassifierResultsData.cc
+    CProcessedMPTData.cc
     CROOTData.cc
 )
 
