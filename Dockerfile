@@ -9,7 +9,8 @@ WORKDIR /cicada/build
 
 RUN /bin/bash -c "source /setup.sh &&\
     cmake -D CMAKE_INSTALL_PREFIX=/build .. &&\
-    make -j install &&\
+    make -j3 &&\
+    make -j3 install &&\
     make install &&\
     pip3 install colorlog==2.10.0 &&\
     cat /setup_cicada.sh"   
