@@ -6,12 +6,7 @@
  @date Jan 15, 2018
  */
 
-#define set_prefix Set
-#define get_prefix Get
-#define var_prefix f
-#define static_prefix s
-
-#include "_member_variables.hh"
+#include "CMemberVariables.hh"
 
 #include "TObject.h"
 

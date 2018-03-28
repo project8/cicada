@@ -18,6 +18,22 @@ Guidelines
 Log
 ---
 
+Version: ?????
+~~~~~~~~~~~~~~
+
+Release Date: 
+'''''''''''''''''''''''''''''''
+
+New Features:
+'''''''''''''
+
+* Added CClassifiedEventData, CClassifierResultsData, and CProcessedMPTData
+* Added CMemberVariables.hh
+
+Fixes:
+''''''
+
+
 Version: 0.4.2
 ~~~~~~~~~~~~~~
 

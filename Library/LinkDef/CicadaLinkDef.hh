@@ -9,6 +9,9 @@
 
 #pragma link C++ namespace Cicada;
 
+#pragma link C++ class Cicada::TClassifiedEventData+;
+#pragma link C++ class Cicada::TClassifierResultsData+;
+#pragma link C++ class Cicada::TProcessedMPTData+;
 #pragma link C++ class Cicada::TProcessedTrackData+;
 #pragma link C++ class Cicada::TMultiTrackEventData+;
 
