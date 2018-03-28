@@ -1,5 +1,7 @@
 /**
  @file CProcessedMPTData.cc
+ @brief Contains TProcessedMPTData
+ @details Contains the definition of the branches saved in the Katydid output for a processed multi-peak track
  @author E. Zayas
  @date Mar 22, 2018
  */
