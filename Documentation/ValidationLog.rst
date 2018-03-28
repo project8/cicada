@@ -27,13 +27,14 @@ Release Date:
 New Features:
 '''''''''''''
 
-* Added CClassifiedEventData, CClassifierResultsData, and CProcessedMPTData
-* Added CMemberVariables.hh
+* Classification related objects; added CClassifiedEventData, CClassifierResultsData, and CProcessedMPTData.
+* Definition of a Cicada-specific prefixes for Set, Get and variables; added CMemberVariables.hh.
 
 Fixes:
 ''''''
 
-* Docker: corrected the installation location from /cicada/build to /build.
+* Docker: correction of the installation location (from /cicada/build to /build).
+* Documentation/Doxygen updates.
 
 
 Version: 0.4.2
