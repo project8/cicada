@@ -33,6 +33,8 @@ New Features:
 Fixes:
 ''''''
 
+* Docker: corrected the installation location from /cicada/build to /build.
+
 
 Version: 0.4.2
 ~~~~~~~~~~~~~~
