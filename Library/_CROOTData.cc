@@ -1,5 +1,7 @@
 /**
- @file _CROOTData.cc
+ @file _CROOTData.hh
+ @brief Contains TProcessedTrackData and TMultiTrackEventData
+ @details This file was not meant to be used by itself.  It should be included in another file with proper include guards and a definition of NAMESPACE
  @author N. S. Oblath
  @date Jan 15, 2018
  */

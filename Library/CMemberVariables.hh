@@ -1,8 +1,9 @@
-/*
- * CMemberVariables.hh
- *
- *  Created on: Mar 28, 2018
- *      Author: N.S. Oblath
+/**
+ @file CMemberVariables.hh
+ @brief Convenience wrapper for _member_variables.hh
+ @details Defines the prefixes to be used by _member_variables.hh defined in Scarab
+ @author N.S. Oblath
+ @date Mar 28, 2018
  */
 
 #ifndef CICADA_CMEMBERVARIABLES_HH_
