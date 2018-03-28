@@ -1,11 +1,7 @@
 #include "TObject.h"
-#include "_member_variables.hh"
 #include "TClonesArray.h"
 
-#define set_prefix Set
-#define get_prefix Get
-#define var_prefix f
-#define static_prefix s
+#include "CMemberVariables.hh"
 
 namespace Cicada
 {

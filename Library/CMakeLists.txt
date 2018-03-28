@@ -7,6 +7,7 @@ set( CICADA_DICT_HEADERFILES
     _CROOTData.hh
     CClassifiedEventData.hh
     CClassifierResultsData.hh
+    CMemberVariables.hh
     CProcessedMPTData.hh
     CROOTData.hh
 )

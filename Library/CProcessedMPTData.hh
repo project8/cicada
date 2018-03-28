@@ -1,5 +1,8 @@
+
+
+#include "CMemberVariables.hh"
+
 #include "TObject.h"
-#include "_member_variables.hh"
 #include "TClonesArray.h"
 
 #define set_prefix Set
