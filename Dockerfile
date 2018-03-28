@@ -7,12 +7,7 @@ COPY setup_cicada.sh /setup_cicada.sh
 
 WORKDIR /cicada/build
 
-RUN /bin/bash -c "source /setup.sh &&\
-    cmake -D CMAKE_INSTALL_PREFIX=/build .. &&\
-    make -j3 &&\
-    make -j3 install &&\
-    make install &&\
-    pip3 install colorlog==2.10.0 &&\
-    cat /setup_cicada.sh"   
+RUN chmod +x /cicada/install_docker.sh &&\
+    /cicada/install_docker.sh
 
 CMD ['source /setup_cicada.sh']
