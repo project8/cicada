@@ -28,17 +28,17 @@ namespace Cicada
 
     class TClassifierResultsData : public TObject
     {
-            mv_accessible(UInt_t, Component);
-            mv_accessible(Int_t, MainCarrierHigh);
-            mv_accessible(Int_t, MainCarrierLow);
-            mv_accessible(Int_t, SideBand);
-
         public:
             TClassifierResultsData();
             TClassifierResultsData(const TClassifierResultsData& orig);
             virtual ~TClassifierResultsData();
             TObject* Clone(const char* newname="");
             TClassifierResultsData& operator=(const TClassifierResultsData& rhs);
+
+            mv_accessible(UInt_t, Component);
+            mv_accessible(Int_t, MainCarrierHigh);
+            mv_accessible(Int_t, MainCarrierLow);
+            mv_accessible(Int_t, SideBand);
 
             ClassDef(TClassifierResultsData, 1);
     };

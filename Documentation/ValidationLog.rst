@@ -27,7 +27,7 @@ Release Date:
 New Features:
 '''''''''''''
 
-* Classification related objects; added CClassifiedEventData, CClassifierResultsData, and CProcessedMPTData.
+* Classification related objects; added CMTEWithClassifierResultsData, CClassifierResultsData, and CProcessedMPTData.
 * Definition of a Cicada-specific prefixes for Set, Get and variables; added CMemberVariables.hh.
 
 Fixes:
