@@ -18,6 +18,25 @@ Guidelines
 Log
 ---
 
+Version: 1.0.0
+~~~~~~~~~~~~~~
+
+Release Date: March 29, 2018
+'''''''''''''''''''''''''''''''
+
+New Features:
+'''''''''''''
+
+* Classification related objects; added CMTEWithClassifierResultsData, CClassifierResultsData, and CProcessedMPTData.
+* Definition of a Cicada-specific prefixes for Set, Get and variables; added CMemberVariables.hh.
+
+Fixes:
+''''''
+
+* Docker: correction of the installation location (from /cicada/build to /build).
+* Documentation/Doxygen updates.
+
+
 Version: 0.4.2
 ~~~~~~~~~~~~~~
 
