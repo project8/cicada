@@ -1,5 +1,7 @@
 /**
- @file CMTEWithClassfierResultsData.cc
+ @file CMTEWithClassifierResultsData.cc
+ @brief Contains TMTEWithClassifierResultsData
+ @details Contains the definition of the branches saved in the Katydid output for a classified event data
  @author E. Zayas
  @date Mar 22, 2018
  */

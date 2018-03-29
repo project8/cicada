@@ -1,5 +1,7 @@
 /**
- @file CClassifierResultsData.cc
+ @file CClassifierResultsData.hh
+ @brief Contains TClassifierResultsData
+ @details Contains the definition of the branches saved in the Katydid output for a classifier results data
  @author E. Zayas
  @date Mar 22, 2018
  */

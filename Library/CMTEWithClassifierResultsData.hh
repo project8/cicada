@@ -1,3 +1,11 @@
+/**
+ @file CMTEWithClassfierResultsData.hh
+ @brief Contains TMTEWithClassfierResultsData
+ @details Contains the definition of the branches saved in the Katydid output for a classified event data
+ @author E. Zayas
+ @date Mar 22, 2018
+ */
+
 #include "TObject.h"
 #include "TClonesArray.h"
 
