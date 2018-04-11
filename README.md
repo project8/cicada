@@ -79,7 +79,8 @@ The following steps will build Cicada from scratch.  Starting with a terminal wi
   - `export PATH=/path/to/install/folder/bin:$PATH`
   - `export LD_LIBRARY_PATH=/path/to/install/folder/lib:$LD_LIBRARY_PATH`
 
-5. **Python interface:** Add the installation folder in your `$PYTHONPATH` (either in your `.bash_profile` or in the terminal):
+5. **Python interface:** Most people want to use the python interface.
+For that, add the installation folder in your `$PYTHONPATH` (either in your `.bash_profile` or in the terminal):
   - `export PYTHONPATH=/path/to/install/folder:$PYTHONPATH`
 
 ## Docker
@@ -107,5 +108,11 @@ root@sdfafd8shusd$ python
 
 ## Usage
 
+### As a dependency
+
 Cicada does not have a use case by itself: it can be a dependencies to be added to your c++ package or uses via its Python interface to extract/read the Katydid output objects from your ROOT file.
 You can find a example on how to use it in the [mermithid](https://github.com/project8/mermithid) Python package (TODO_DOC).
+
+### Via its example
+
+An example about how to read Katydid output file can be found under Library/python/ReadKTOutput.py.
