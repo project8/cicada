@@ -18,6 +18,18 @@ Guidelines
 Log
 ---
 
+
+Version: 1.0.0
+~~~~~~~~~~~~~~
+
+Release Date: April 10, 2018
+'''''''''''''''''''''''''''''''
+
+Fixes:
+''''''
+
+* Docker: Sleep time after chmod of installation script.
+
 Version: 1.0.0
 ~~~~~~~~~~~~~~
 
