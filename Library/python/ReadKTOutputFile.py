@@ -28,7 +28,6 @@ def ReadKTOutputFile(filename,var):
     while treeReader.Next():
         function = getattr(multiTrackEvents,"Get{}".format(var))
         resultList.append(function())
-        print(resultList[-1])
     return resultList
 
 if __name__ =="__main__":
