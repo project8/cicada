@@ -79,11 +79,33 @@ The following steps will build Cicada from scratch.  Starting with a terminal wi
   - `export PATH=/path/to/install/folder/bin:$PATH`
   - `export LD_LIBRARY_PATH=/path/to/install/folder/lib:$LD_LIBRARY_PATH`
 
-5. **Python interface:** TODO_DOC (once we get it working)
+5. **Python interface:** Add the installation folder in your `$PYTHONPATH` (either in your `.bash_profile` or in the terminal):
+  - `export PYTHONPATH=/path/to/install/folder:$PYTHONPATH`
+
+## Docker
+
+Docker can be used as a test-bed for bugs or users that don't want to mess with their computer environment.
+You can pull the latest version from DockerHub:
+```
+$ docker pull project8/cicada:latest
+```
+Then start a container:
+```
+$ docker start -it project8/cicada:latest bash
+```
+Finally before using python or Cicada or ROOT in this container, use the environment setup script
+```
+root@sdfafd8shusd$ source /setup.sh
+```
+
+You should now be able to use Cicada:
+```
+root@sdfafd8shusd$ python
+> import CicadaPy
+> CicadaPy.loadLibraries()
+```
 
 ## Usage
 
 Cicada does not have a use case by itself: it can be a dependencies to be added to your c++ package or uses via its Python interface to extract/read the Katydid output objects from your ROOT file.
-You can find a example on how to use it in the [morpho](https://github.com/project8/morpho) Python package (TODO_DOC).
-
-
+You can find a example on how to use it in the [mermithid](https://github.com/project8/mermithid) Python package (TODO_DOC).
