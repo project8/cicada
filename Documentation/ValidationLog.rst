@@ -19,7 +19,24 @@ Log
 ---
 
 
-Version: 1.0.0
+Version: 1.0.2
+~~~~~~~~~~~~~~
+
+Release Date: April 12, 2018
+'''''''''''''''''''''''''''''''
+
+New Features:
+'''''''''''''
+
+* ReadKTOutput: Support of Cicada and Katydid namespaces and access to TMultiTrackEventData members.
+
+Fixes:
+''''''
+
+* Documentation update about the python libraries.
+
+
+Version: 1.0.1
 ~~~~~~~~~~~~~~
 
 Release Date: April 10, 2018
@@ -29,6 +46,7 @@ Fixes:
 ''''''
 
 * Docker: Sleep time after chmod of installation script.
+
 
 Version: 1.0.0
 ~~~~~~~~~~~~~~
