@@ -29,6 +29,9 @@ Additional documentation can be found [here](https://www.project8.org/cicada).
 - CMake (3.1 or better)
 - ROOT (6.0 or better)
 
+**Python dependencies**
+- colorlog (3.1.2 or better)
+
 **Submodules** (included with Cicada; must be fetched via Git)
 
 - [Scarab](https://github.com/project8/scarab)
