@@ -26,11 +26,25 @@ def ReadKTOutputFile(filename,var,katydid=False):
         import ROOT.Cicada as KT
     multiTrackEvents = TTreeReaderValue(KT.TMultiTrackEventData)(treeReader, "Event")
 
+    # Analyze var to see if we are looking for a subTree
+    subArg = var.split(".")
+
     resultList = []
     # Go through the events
-    while treeReader.Next():
-        function = getattr(multiTrackEvents,"Get{}".format(var))
-        resultList.append(function())
+        
+    if len(subArg)==1:
+        while treeReader.Next():
+            function = getattr(multiTrackEvents,"Get{}".format(subArg[0]))
+            resultList.append(function())
+    else:
+        while treeReader.Next():
+            function = getattr(multiTrackEvents,"Get{}".format(subArg[0]))
+            obj = function()
+            subList = []
+            for i in range(multiTrackEvents.GetTracks().GetEntries()-1):
+                function = getattr(getattr(obj,"At")(i),"Get{}".format(subArg[1]))
+                subList.append(function())
+            resultList.append(subList)
     if len(resultList)==0:
         print("Error: no data found; wrong branch? or wrong namespace (Cicada/Katydid) -- maybe, try '-k'?")
     return resultList
