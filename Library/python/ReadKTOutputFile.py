@@ -46,7 +46,7 @@ def ReadKTOutputFile(filename,var,katydid=False):
                 subList.append(function())
             resultList.append(subList)
     if len(resultList)==0:
-        print("Error: no data found; wrong branch? or wrong namespace (Cicada/Katydid) -- maybe, try '-k'?")
+        print("Error: no data found; wrong branch? or wrong namespace (Cicada/Katydid) -- maybe, try '-k'/add True as last argument?")
     return resultList
 
 if __name__ =="__main__":
