@@ -44,6 +44,10 @@ namespace Cicada
             mv_accessible(UInt_t, Component);
             mv_referrable(TProcessedTrackData, MainTrack);
             mv_accessible(Double_t, AxialFrequency);
+        
+        public:
+            const char *GetDefaultObjectName() { return "MultiPeakTrack"; } // Defines the default name of the object saved inside the output tree
+        
 
             ClassDef(TProcessedMPTData, 2);
     };

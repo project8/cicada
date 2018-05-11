@@ -39,6 +39,9 @@ namespace Cicada
             mv_accessible(Int_t, MainCarrierHigh);
             mv_accessible(Int_t, MainCarrierLow);
             mv_accessible(Int_t, SideBand);
+        
+        public:
+            const char *GetDefaultObjectName() { return "Event"; } // Defines the default name of the object saved inside the output tree                  
 
             ClassDef(TClassifierResultsData, 1);
     };

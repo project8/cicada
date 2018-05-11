@@ -68,6 +68,8 @@ namespace NAMESPACE
             //void Load(const KTProcessedTrackData& data);
             //void Unload(KTProcessedTrackData& data) const;
 
+            const char *GetDefaultObjectName() { return "Track"; } // Defines the default name of the object saved inside the output tree      
+
             ClassDef(TProcessedTrackData, 1);
     };
 
@@ -132,6 +134,8 @@ namespace NAMESPACE
 
             //void Load(const KTMultiTrackEventData& data);
             //void Unload(KTMultiTrackEventData& data) const;
+
+            const char *GetDefaultObjectName() { return "Event"; } // Defines the default name of the object saved inside the output tree
 
             ClassDef(TMultiTrackEventData, 1);
     };
