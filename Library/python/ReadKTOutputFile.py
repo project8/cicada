@@ -1,22 +1,31 @@
 #!/usr/bin/env python
 
 '''
-Example of how to open and read a Katydid output file.
+Name: ReadKTOutputFile
+Author: MG 
+Date: 2018/05/10
+Purpose: 
+    Example of how to open and read a Katydid output file.
+    Can read 
 '''
 
 import CicadaPy
 CicadaPy.loadLibraries(True)
 
 from ROOT import TFile, TTreeReader, TTreeReaderValue
+import sys
 
-def ReadKTOutputFile(filename,var,katydid=False):
+def ReadKTOutputFile(filename,var,katydid=False,objectType="TMultiTrackEventData",name="multiTrackEvents:Event"):
     # Open the ROOT file
     file = TFile.Open(filename)
     if not file:
         raise FileNotFoundError("File {} does not exist".format(filename))
-
+    # Extract tree and object names
+    # names[0]: name of the tree
+    # names[1]: name of the object in the tree
+    names = name.split(":")
     # Extract tree from file
-    tree = file.Get("multiTrackEvents")
+    tree = file.Get(str(names[0]))
     # Create TTreeReader
     treeReader = TTreeReader(tree)
     # Create object TMultiTrackEventData to "point" to the object "Event" in the tree
@@ -24,7 +33,11 @@ def ReadKTOutputFile(filename,var,katydid=False):
         import ROOT.Katydid as KT
     else:
         import ROOT.Cicada as KT
-    multiTrackEvents = TTreeReaderValue(KT.TMultiTrackEventData)(treeReader, "Event")
+    if hasattr(KT,objectType):
+        multiTrackEvents = TTreeReaderValue(getattr(KT,objectType))(treeReader, names[1])
+    else:
+        print("Couldn't find type <{}> in module; exiting!".format(objectType))
+        sys.exit(1)
 
     # Analyze var to see if we are looking for a subTree
     subArg = var.split(".")
@@ -67,6 +80,17 @@ if __name__ =="__main__":
                    action='store_true',
                    required=False,
                    default=False)
+    p.add_argument('-t','--type',
+                   help='Object Type to be read',
+                   type=str,
+                   required=False,
+                   default="TMultiTrackEventData")
+    p.add_argument('-n','--name',
+                   help='Object and Tree Name to be read, separated by a ":" (ex: multiTrackEvents:Event)',
+                   type=str,
+                   required=False,
+                   default="multiTrackEvents:Event")
     args = p.parse_args()
 
-    print("Found {} elements for {}".format(len(ReadKTOutputFile(args.input, args.branch,args.katydid)),args.branch))
+    nElements = len(ReadKTOutputFile(args.input, args.branch, katydid=args.katydid, objectType=args.type, name=args.name))
+    print("Found {} elements for {}".format(nElements,args.branch))
