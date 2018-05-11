@@ -42,9 +42,6 @@ namespace Cicada
 
         private:
             TClonesArray* fClassifierResults;
-        
-        public:
-            const char *GetDefaultObjectName() { return "Event"; } // Defines the default name of the object saved inside the output tree    
 
             ClassDef(TMTEWithClassifierResultsData, 1);
     };
