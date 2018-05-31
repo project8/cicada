@@ -46,7 +46,7 @@ namespace Cicada
             mv_accessible(Double_t, AxialFrequency);
         
         public:
-            const char *GetDefaultObjectName() { return "MultiPeakTrack"; } // Defines the default name of the object saved inside the output tree
+            std::string GetBranchName() { return std::string("MultiPeakTrack"); } // Defines the default name of the object saved inside the output tree
         
 
             ClassDef(TProcessedMPTData, 2);

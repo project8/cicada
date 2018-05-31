@@ -41,7 +41,7 @@ namespace Cicada
             mv_accessible(Int_t, SideBand);
         
         public:
-            const char *GetDefaultObjectName() { return "Event"; } // Defines the default name of the object saved inside the output tree                  
+            std::string GetBranchName() { return std::string("Event"); } // Defines the default name of the object saved inside the output tree                  
 
             ClassDef(TClassifierResultsData, 1);
     };
