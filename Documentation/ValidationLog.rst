@@ -18,6 +18,24 @@ Guidelines
 Log
 ---
 
+Version: XXX
+~~~~~~~~~~~~~~
+
+Release Date: XXXXXXXXXX
+'''''''''''''''''''''''''''''''
+
+New Features:
+'''''''''''''
+
+* TProcessedTrackData: adding SNR and NUP based quantities:
+    * NTrackBins
+    * TotalTrackSNR
+    * MaxTrackSNR
+    * TotalTrackNUP
+    * MaxTrackNUP
+    * TotalWideTrackSNR
+    * TotalWideTrackNUP
+
 
 Version: 1.0.2
 ~~~~~~~~~~~~~~
