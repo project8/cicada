@@ -72,7 +72,7 @@ def ReadKTOutputFile(filename,var,katydid=False,objectType="TMultiTrackEventData
                 function = getattr(multiTrackEvents,"Get{}".format(subArg[0]))
                 obj = function()
                 subList = []
-                for i in range(multiTrackEvents.GetTracks().GetEntries()-1):
+                for i in range(multiTrackEvents.GetTracks().GetEntries()):
                     function = getattr(getattr(obj,"At")(i),"Get{}".format(subArg[1]))
                     subList.append(function())
                 result[var].append(subList)
