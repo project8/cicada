@@ -18,6 +18,32 @@ Guidelines
 Log
 ---
 
+Version: x.y.z
+~~~~~~~~~~~~~~
+
+Release Date: ?????????????????
+'''''''''''''''''''''''''''''''
+
+New Features:
+'''''''''''''
+
+* TProcessedTrackData: adding SNR and NUP based quantities:
+    * NTrackBins
+    * TotalTrackSNR
+    * MaxTrackSNR
+    * TotalTrackNUP
+    * MaxTrackNUP
+    * TotalWideTrackSNR
+    * TotalWideTrackNUP
+
+* Moving the default object name from the Katydid Writer into Cicada:
+      * TMultiTrackEventData
+      * TProcessedTrackData
+      * TProcessedMPTData (not done as inherits from TMultiTrackEventData)
+      * TClassifierResultsData
+
+Fixes:
+''''''
 
 Version: 1.0.2
 ~~~~~~~~~~~~~~

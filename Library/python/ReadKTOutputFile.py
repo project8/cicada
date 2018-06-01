@@ -79,7 +79,7 @@ def ReadKTOutputFile(filename,var,katydid=False,objectType="TMultiTrackEventData
                 n+=1
         treeReader.Restart()
         if n==0:
-            print("Error: no data found; wrong branch? or wrong namespace (Cicada/Katydid) -- maybe, try '-k'?")
+            print("Error: no data found; wrong branch? or wrong namespace (Cicada/Katydid) -- maybe, try '-k'/add True as last argument?")
     if len(result.keys())==1:
         return result[list(result.keys())[0]]
     return result

@@ -29,6 +29,7 @@ namespace NAMESPACE
 
     class TProcessedTrackData : public TObject
     {
+        public:    
             mv_accessible(UInt_t, Component); 
             mv_accessible(UInt_t, AcquisitionID);
             mv_accessible(UInt_t, TrackID);
@@ -37,6 +38,7 @@ namespace NAMESPACE
 
             mv_accessible(Bool_t, IsCut);
 
+            // Track properties obtained from "fit"
             mv_accessible(Double_t, StartTimeInRunC);
             mv_accessible(Double_t, StartTimeInAcq);
             mv_accessible(Double_t, EndTimeInRunC);
@@ -46,8 +48,18 @@ namespace NAMESPACE
             mv_accessible(Double_t, FrequencyWidth);
             mv_accessible(Double_t, Slope);
             mv_accessible(Double_t, Intercept);
-            mv_accessible(Double_t, TotalPower);
 
+            // Track properties obtained by combining the points that belong to the track
+            mv_accessible(Double_t, TotalPower);
+            mv_accessible(UInt_t, NTrackBins);
+            mv_accessible(Double_t, TotalTrackSNR);
+            mv_accessible(Double_t, MaxTrackSNR);
+            mv_accessible(Double_t, TotalTrackNUP);
+            mv_accessible(Double_t, MaxTrackNUP);
+            mv_accessible(Double_t, TotalWideTrackSNR);
+            mv_accessible(Double_t, TotalWideTrackNUP);
+
+            // Errors on the estimated parameters
             mv_accessible(Double_t, StartTimeInRunCSigma);
             mv_accessible(Double_t, EndTimeInRunCSigma);
             mv_accessible(Double_t, TimeLengthSigma);
@@ -67,6 +79,8 @@ namespace NAMESPACE
 
             //void Load(const KTProcessedTrackData& data);
             //void Unload(KTProcessedTrackData& data) const;
+
+            std::string GetBranchName() { return std::string("Track"); } // Defines the default name of the object saved inside the output tree      
 
             ClassDef(TProcessedTrackData, 1);
     };
@@ -132,6 +146,8 @@ namespace NAMESPACE
 
             //void Load(const KTMultiTrackEventData& data);
             //void Unload(KTMultiTrackEventData& data) const;
+
+            std::string GetBranchName() { return std::string("Event"); } // Defines the default name of the object saved inside the output tree
 
             ClassDef(TMultiTrackEventData, 1);
     };
