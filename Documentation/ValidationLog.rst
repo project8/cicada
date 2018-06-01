@@ -42,6 +42,8 @@ New Features:
       * TProcessedMPTData (not done as inherits from TMultiTrackEventData)
       * TClassifierResultsData
 
+* ReadKTOutputFile: Extraction of tracks information from TMultiTrackEventData and of multiple branches at once.
+
 Fixes:
 ''''''
 
@@ -54,7 +56,7 @@ Release Date: April 12, 2018
 New Features:
 '''''''''''''
 
-* ReadKTOutput: Support of Cicada and Katydid namespaces and access to TMultiTrackEventData members.
+* ReadKTOutputFile: Support of Cicada and Katydid namespaces and access to TMultiTrackEventData members.
 
 Fixes:
 ''''''
