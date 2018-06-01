@@ -76,7 +76,7 @@ namespace NAMESPACE
         fNTrackBins = rhs.fNTrackBins; fTotalTrackSNR = rhs.fTotalTrackSNR; fMaxTrackSNR = rhs.fMaxTrackSNR; fTotalTrackNUP = rhs.fTotalTrackNUP; fMaxTrackNUP = rhs.fMaxTrackNUP; fTotalWideTrackSNR = rhs.fTotalWideTrackSNR; fTotalWideTrackNUP = rhs.fTotalWideTrackNUP;
         fStartTimeInRunCSigma = rhs.fStartTimeInRunCSigma; fEndTimeInRunCSigma = rhs.fEndTimeInRunCSigma; fTimeLengthSigma = rhs.fTimeLengthSigma;
         fStartFrequencySigma = rhs.fStartFrequencySigma; fEndFrequencySigma = rhs.fEndFrequencySigma; fFrequencyWidthSigma = rhs.fFrequencyWidthSigma;
-        fSlopeSigma = rhs.fSlopeSigma; fInterceptSigma = rhs.fInterceptSigma; fTotalPowerSigma = rhs.fTotalPowerSigma;
+        fSlopeSigma = rhs.fSlopeSigma; fInterceptSigma = rhs.fInterceptSigma; fTotalPowerSigma = rhs.fTotalPowerSigma;        
         return *this;
     }
 /*

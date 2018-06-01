@@ -51,7 +51,7 @@ namespace NAMESPACE
 
             // Track properties obtained by combining the points that belong to the track
             mv_accessible(Double_t, TotalPower);
-            mv_accessible(Double_t, NTrackBins);
+            mv_accessible(UInt_t, NTrackBins);
             mv_accessible(Double_t, TotalTrackSNR);
             mv_accessible(Double_t, MaxTrackSNR);
             mv_accessible(Double_t, TotalTrackNUP);
