@@ -24,6 +24,14 @@ TMultiTrackEventData
 * **MaximumFrequency** -- Double_t: maximum frequency reached by the event
 * **FrequencyWidth** -- Double_t: range of frequencies covered by the event tracks
 
+* **NTrackBins** -- UInt_t: number of bins in the track
+* **TotalTrackSNR** -- Double_t: Sum of the track bins SNR
+* **MaxTrackSNR** -- Double_t: Max of the track bins SNR
+* **TotalTrackNUP** -- Double_t: Sum of the track bins Normalized Unitless Power (NUP)
+* **MaxTrackNUP** -- Double_t: Max of the track bins Normalized Unitless Power (NUP)
+* **TotalWideTrackSNR** -- Double_t: Sum of the track extended bins SNR
+* **TotalWideTrackNUP** -- Double_t: Sum of the track extended bins Normalized Unitless Power (NUP)
+
 * **StartTimeInRunCSigma** -- Double_t: error on the start time of the event in the Katydid instance
 * **EndTimeInRunCSigma** -- Double_t: error on the end time of the event in the Katydid instance
 * **StartFrequencySigma** -- Double_t: error on the start frequency of the event
