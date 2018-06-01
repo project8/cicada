@@ -18,6 +18,32 @@ Guidelines
 Log
 ---
 
+Version: 1.1.0
+~~~~~~~~~~~~~~
+
+Release Date: June 1st, 2018
+''''''''''''''''''''''''''''
+
+New Features:
+'''''''''''''
+
+* TProcessedTrackData: adding SNR and NUP based quantities:
+    * NTrackBins
+    * TotalTrackSNR
+    * MaxTrackSNR
+    * TotalTrackNUP
+    * MaxTrackNUP
+    * TotalWideTrackSNR
+    * TotalWideTrackNUP
+* Moving the default object name from the Katydid Writer into Cicada:
+      * TMultiTrackEventData
+      * TProcessedTrackData
+      * TProcessedMPTData (not done as inherits from TMultiTrackEventData)
+      * TClassifierResultsData
+* ReadKTOutputFile: 
+    * Extraction of tracks information from TMultiTrackEventData.
+    * Extraction of multiple branches without one execution.
+
 
 Version: 1.0.2
 ~~~~~~~~~~~~~~
@@ -28,7 +54,7 @@ Release Date: April 12, 2018
 New Features:
 '''''''''''''
 
-* ReadKTOutput: Support of Cicada and Katydid namespaces and access to TMultiTrackEventData members.
+* ReadKTOutputFile: Support of Cicada and Katydid namespaces and access to TMultiTrackEventData members.
 
 Fixes:
 ''''''
