@@ -18,11 +18,11 @@ Guidelines
 Log
 ---
 
-Version: x.y.z
+Version: 1.1.0
 ~~~~~~~~~~~~~~
 
-Release Date: ?????????????????
-'''''''''''''''''''''''''''''''
+Release Date: June 1st, 2018
+''''''''''''''''''''''''''''
 
 New Features:
 '''''''''''''
@@ -35,19 +35,15 @@ New Features:
     * MaxTrackNUP
     * TotalWideTrackSNR
     * TotalWideTrackNUP
-
 * Moving the default object name from the Katydid Writer into Cicada:
       * TMultiTrackEventData
       * TProcessedTrackData
       * TProcessedMPTData (not done as inherits from TMultiTrackEventData)
       * TClassifierResultsData
-
 * ReadKTOutputFile: 
     * Extraction of tracks information from TMultiTrackEventData.
     * Extraction of multiple branches without one execution.
 
-Fixes:
-''''''
 
 Version: 1.0.2
 ~~~~~~~~~~~~~~
