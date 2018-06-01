@@ -42,7 +42,9 @@ New Features:
       * TProcessedMPTData (not done as inherits from TMultiTrackEventData)
       * TClassifierResultsData
 
-* ReadKTOutputFile: Extraction of tracks information from TMultiTrackEventData and of multiple branches at once.
+* ReadKTOutputFile: 
+    * Extraction of tracks information from TMultiTrackEventData.
+    * Extraction of multiple branches without one execution.
 
 Fixes:
 ''''''
