@@ -18,10 +18,10 @@ Guidelines
 Log
 ---
 
-Version: XXX
+Version: x.y.z
 ~~~~~~~~~~~~~~
 
-Release Date: XXXXXXXXXX
+Release Date: ?????????????????
 '''''''''''''''''''''''''''''''
 
 New Features:
@@ -36,6 +36,14 @@ New Features:
     * TotalWideTrackSNR
     * TotalWideTrackNUP
 
+* Moving the default object name from the Katydid Writer into Cicada:
+      * TMultiTrackEventData
+      * TProcessedTrackData
+      * TProcessedMPTData (not done as inherits from TMultiTrackEventData)
+      * TClassifierResultsData
+
+Fixes:
+''''''
 
 Version: 1.0.2
 ~~~~~~~~~~~~~~

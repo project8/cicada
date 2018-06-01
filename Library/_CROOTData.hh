@@ -80,6 +80,8 @@ namespace NAMESPACE
             //void Load(const KTProcessedTrackData& data);
             //void Unload(KTProcessedTrackData& data) const;
 
+            std::string GetBranchName() { return std::string("Track"); } // Defines the default name of the object saved inside the output tree      
+
             ClassDef(TProcessedTrackData, 1);
     };
 
@@ -144,6 +146,8 @@ namespace NAMESPACE
 
             //void Load(const KTMultiTrackEventData& data);
             //void Unload(KTMultiTrackEventData& data) const;
+
+            std::string GetBranchName() { return std::string("Event"); } // Defines the default name of the object saved inside the output tree
 
             ClassDef(TMultiTrackEventData, 1);
     };
