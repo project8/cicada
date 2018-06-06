@@ -82,7 +82,7 @@ namespace NAMESPACE
 
             std::string GetBranchName() { return std::string("Track"); } // Defines the default name of the object saved inside the output tree      
 
-            ClassDef(TProcessedTrackData, 1);
+            ClassDef(TProcessedTrackData, 2);
     };
 
    /*!
