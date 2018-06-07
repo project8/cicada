@@ -18,6 +18,17 @@ Guidelines
 Log
 ---
 
+Version: 1.1.1
+~~~~~~~~~~~~~~
+
+Release Date: June 7th, 2018
+''''''''''''''''''''''''''''
+
+Fixes:
+''''''
+
+* Bumping ClassDef version for TProcessedTrackData
+
 Version: 1.1.0
 ~~~~~~~~~~~~~~
 
