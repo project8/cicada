@@ -169,6 +169,7 @@ namespace NAMESPACE
         fStartTimeInRunCSigma = rhs.fStartTimeInRunCSigma; fEndTimeInRunCSigma = rhs.fEndTimeInRunCSigma; fTimeLengthSigma = rhs.fTimeLengthSigma;
         fStartFrequencySigma = rhs.fStartFrequencySigma; fEndFrequencySigma = rhs.fEndFrequencySigma; fFrequencyWidthSigma = rhs.fFrequencyWidthSigma;
         fFirstTrackID = rhs.fFirstTrackID; fFirstTrackTimeLength = rhs.fFirstTrackTimeLength; fFirstTrackFrequencyWidth = rhs.fFirstTrackFrequencyWidth; fFirstTrackSlope = rhs.fFirstTrackSlope; fFirstTrackIntercept = rhs.fFirstTrackIntercept; fFirstTrackTotalPower = rhs.fFirstTrackTotalPower;
+        fFirstTrackTotalSNR = rhs.fFirstTrackTotalSNR; fFirstTrackMaxSNR = rhs.fFirstTrackMaxSNR; fFirstTrackTotalNUP = rhs.fFirstTrackTotalNUP; fFirstTrackMaxNUP = rhs.fFirstTrackMaxNUP; fFirstTrackTotalWideSNR = rhs.fFirstTrackTotalWideSNR; fFirstTrackTotalWideNUP = rhs.fFirstTrackTotalWideNUP;
         fUnknownEventTopology = rhs.fUnknownEventTopology;
         fTracks->Clear(); (*fTracks) = *(rhs.fTracks);
         return *this;
