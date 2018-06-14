@@ -155,7 +155,7 @@ namespace NAMESPACE
 
             std::string GetBranchName() { return std::string("Event"); } // Defines the default name of the object saved inside the output tree
 
-            ClassDef(TMultiTrackEventData, 1);
+            ClassDef(TMultiTrackEventData, 2);
     };
 
 
