@@ -27,6 +27,7 @@ Releases:
 '''''''''
 
 * TMultiTrackEventData: adding SNR and NUP based quantities for the first track:
+    * FirstTrackNTrackBins
     * FirstTrackTotalSNR
     * FirstTrackMaxSNR
     * FirstTrackTotalNUP
