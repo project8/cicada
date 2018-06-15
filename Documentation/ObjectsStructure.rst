@@ -36,12 +36,13 @@ TMultiTrackEventData
 * **FirstTrackSlope** -- Double_t: slope of the first track
 * **FirstTrackIntercept** -- Double_t: intercept at t=0 of the first track
 * **FirstTrackTotalPower** -- Double_t: sum of the power of the bins composing the first track
-* **FirstTrackTotalTrackSNR** -- Double_t: Sum of the track bins SNR of the first track
-* **FirstTrackMaxTrackSNR** -- Double_t: Max of the track bins SNR of the first track
-* **FirstTrackTotalTrackNUP** -- Double_t: Sum of the track bins Normalized Unitless Power (NUP) of the first track
-* **FirstTrackMaxTrackNUP** -- Double_t: Max of the track bins Normalized Unitless Power (NUP) of the first track
-* **FirstTrackTotalWideTrackSNR** -- Double_t: Sum of the track extended bins SNR of the first track
-* **FirstTrackTotalWideTrackNUP** -- Double_t: Sum of the track extended bins Normalized Unitless Power (NUP) of the first track
+* **FirstTrackNTrackBins** -- UInt_t: number of bins in the first track
+* **FirstTrackTotalTrackSNR** -- Double_t: Sum of the first track bins SNR
+* **FirstTrackMaxTrackSNR** -- Double_t: Max of the first track bins SNR
+* **FirstTrackTotalTrackNUP** -- Double_t: Sum of the first track bins Normalized Unitless Power (NUP)
+* **FirstTrackMaxTrackNUP** -- Double_t: Max of the first track bins Normalized Unitless Power (NUP)
+* **FirstTrackTotalWideTrackSNR** -- Double_t: Sum of the first track extended bins SNR
+* **FirstTrackTotalWideTrackNUP** -- Double_t: Sum of the first track extended bins Normalized Unitless Power (NUP)
 
 * **UnknownEventTopology** -- Double_t: boolean describing if a track has some weird topology
 
