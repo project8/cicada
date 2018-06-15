@@ -78,7 +78,7 @@ namespace NAMESPACE
             fStartTimeInRunCSigma(0.), fEndTimeInRunCSigma(0.), fTimeLengthSigma(0.),
             fStartFrequencySigma(0.), fEndFrequencySigma(0.), fFrequencyWidthSigma(0.),
             fFirstTrackID(0), fFirstTrackTimeLength(0.), fFirstTrackFrequencyWidth(0.), fFirstTrackSlope(0.), fFirstTrackIntercept(0.), fFirstTrackTotalPower(0.),
-            fFirstTrackTotalSNR(0.), fFirstTrackMaxSNR(0.), fFirstTrackTotalNUP(0.), fFirstTrackMaxNUP(0.), fFirstTrackTotalWideSNR(0.), fFirstTrackTotalWideNUP(0.),             
+            fFirstTrackNTrackBins(0), fFirstTrackTotalSNR(0.), fFirstTrackMaxSNR(0.), fFirstTrackTotalNUP(0.), fFirstTrackMaxNUP(0.), fFirstTrackTotalWideSNR(0.), fFirstTrackTotalWideNUP(0.),             
             fUnknownEventTopology(false)
     {
         static const std::string className = std::string(TOSTRING(NAMESPACE)) + "::TProcessedTrackData";
@@ -93,7 +93,7 @@ namespace NAMESPACE
             fStartTimeInRunCSigma(orig.fStartTimeInRunCSigma), fEndTimeInRunCSigma(orig.fEndTimeInRunCSigma), fTimeLengthSigma(orig.fTimeLengthSigma),
             fStartFrequencySigma(orig.fStartFrequencySigma), fEndFrequencySigma(orig.fEndFrequencySigma), fFrequencyWidthSigma(orig.fFrequencyWidthSigma),
             fFirstTrackID(orig.fFirstTrackID), fFirstTrackTimeLength(orig.fFirstTrackTimeLength), fFirstTrackFrequencyWidth(orig.fFirstTrackFrequencyWidth), fFirstTrackSlope(orig.fFirstTrackSlope), fFirstTrackIntercept(orig.fFirstTrackIntercept), fFirstTrackTotalPower(orig.fFirstTrackTotalPower),
-            fFirstTrackTotalSNR(orig.fFirstTrackTotalSNR), fFirstTrackMaxSNR(orig.fFirstTrackMaxSNR), fFirstTrackTotalNUP(orig.fFirstTrackTotalNUP), fFirstTrackMaxNUP(orig.fFirstTrackMaxNUP), fFirstTrackTotalWideSNR(orig.fFirstTrackTotalWideSNR), fFirstTrackTotalWideNUP(orig.fFirstTrackTotalWideNUP), 
+            fFirstTrackNTrackBins(orig.FirstTrackNTrackBins), fFirstTrackTotalSNR(orig.fFirstTrackTotalSNR), fFirstTrackMaxSNR(orig.fFirstTrackMaxSNR), fFirstTrackTotalNUP(orig.fFirstTrackTotalNUP), fFirstTrackMaxNUP(orig.fFirstTrackMaxNUP), fFirstTrackTotalWideSNR(orig.fFirstTrackTotalWideSNR), fFirstTrackTotalWideNUP(orig.fFirstTrackTotalWideNUP), 
             fUnknownEventTopology(orig.fUnknownEventTopology)
     {
         // this cannot be initialized in the initializer list because ROOT
@@ -119,7 +119,7 @@ namespace NAMESPACE
         fStartTimeInRunCSigma = rhs.fStartTimeInRunCSigma; fEndTimeInRunCSigma = rhs.fEndTimeInRunCSigma; fTimeLengthSigma = rhs.fTimeLengthSigma;
         fStartFrequencySigma = rhs.fStartFrequencySigma; fEndFrequencySigma = rhs.fEndFrequencySigma; fFrequencyWidthSigma = rhs.fFrequencyWidthSigma;
         fFirstTrackID = rhs.fFirstTrackID; fFirstTrackTimeLength = rhs.fFirstTrackTimeLength; fFirstTrackFrequencyWidth = rhs.fFirstTrackFrequencyWidth; fFirstTrackSlope = rhs.fFirstTrackSlope; fFirstTrackIntercept = rhs.fFirstTrackIntercept; fFirstTrackTotalPower = rhs.fFirstTrackTotalPower;
-        fFirstTrackTotalSNR = rhs.fFirstTrackTotalSNR; fFirstTrackMaxSNR = rhs.fFirstTrackMaxSNR; fFirstTrackTotalNUP = rhs.fFirstTrackTotalNUP; fFirstTrackMaxNUP = rhs.fFirstTrackMaxNUP; fFirstTrackTotalWideSNR = rhs.fFirstTrackTotalWideSNR; fFirstTrackTotalWideNUP = rhs.fFirstTrackTotalWideNUP;
+        fFirstTrackNTrackBins = rhs.fFirstTrackNTrackBins; fFirstTrackTotalSNR = rhs.fFirstTrackTotalSNR; fFirstTrackMaxSNR = rhs.fFirstTrackMaxSNR; fFirstTrackTotalNUP = rhs.fFirstTrackTotalNUP; fFirstTrackMaxNUP = rhs.fFirstTrackMaxNUP; fFirstTrackTotalWideSNR = rhs.fFirstTrackTotalWideSNR; fFirstTrackTotalWideNUP = rhs.fFirstTrackTotalWideNUP;
         fUnknownEventTopology = rhs.fUnknownEventTopology;
         fTracks->Clear(); (*fTracks) = *(rhs.fTracks);
         return *this;

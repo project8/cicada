@@ -127,6 +127,7 @@ namespace NAMESPACE
             mv_accessible(Double_t, FirstTrackSlope);
             mv_accessible(Double_t, FirstTrackIntercept);
             mv_accessible(Double_t, FirstTrackTotalPower);
+            mv_accessible(UInt_t,   FirstTrackNTrackBins);
             mv_accessible(Double_t, FirstTrackTotalSNR);
             mv_accessible(Double_t, FirstTrackMaxSNR);
             mv_accessible(Double_t, FirstTrackTotalNUP);
