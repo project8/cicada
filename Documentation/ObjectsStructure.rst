@@ -3,7 +3,7 @@ Objects' structure and description
 
 Here is described the content and associated description of the Cicada objects.
 
-Version 1.x.x
+Version 1.2.0
 ~~~~~~~~~~~~~~~~~~~
 
 TMultiTrackEventData
