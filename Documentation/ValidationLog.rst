@@ -18,6 +18,23 @@ Guidelines
 Log
 ---
 
+Version: x.x.x
+~~~~~~~~~~~~~~
+
+Release Date: June 14th, 2018
+''''''''''''''''''''''''''''
+Releases:
+'''''''''
+
+* TMultiTrackEventData: adding SNR and NUP based quantities for the first track:
+    * FirstTrackNTrackBins
+    * FirstTrackTotalSNR
+    * FirstTrackMaxSNR
+    * FirstTrackTotalNUP
+    * FirstTrackMaxNUP
+    * FirstTrackTotalWideSNR
+    * FirstTrackTotalWideNUP
+
 Version: 1.1.1
 ~~~~~~~~~~~~~~
 
