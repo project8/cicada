@@ -93,7 +93,7 @@ namespace NAMESPACE
             fStartTimeInRunCSigma(orig.fStartTimeInRunCSigma), fEndTimeInRunCSigma(orig.fEndTimeInRunCSigma), fTimeLengthSigma(orig.fTimeLengthSigma),
             fStartFrequencySigma(orig.fStartFrequencySigma), fEndFrequencySigma(orig.fEndFrequencySigma), fFrequencyWidthSigma(orig.fFrequencyWidthSigma),
             fFirstTrackID(orig.fFirstTrackID), fFirstTrackTimeLength(orig.fFirstTrackTimeLength), fFirstTrackFrequencyWidth(orig.fFirstTrackFrequencyWidth), fFirstTrackSlope(orig.fFirstTrackSlope), fFirstTrackIntercept(orig.fFirstTrackIntercept), fFirstTrackTotalPower(orig.fFirstTrackTotalPower),
-            fFirstTrackNTrackBins(orig.FirstTrackNTrackBins), fFirstTrackTotalSNR(orig.fFirstTrackTotalSNR), fFirstTrackMaxSNR(orig.fFirstTrackMaxSNR), fFirstTrackTotalNUP(orig.fFirstTrackTotalNUP), fFirstTrackMaxNUP(orig.fFirstTrackMaxNUP), fFirstTrackTotalWideSNR(orig.fFirstTrackTotalWideSNR), fFirstTrackTotalWideNUP(orig.fFirstTrackTotalWideNUP), 
+            fFirstTrackNTrackBins(orig.fFirstTrackNTrackBins), fFirstTrackTotalSNR(orig.fFirstTrackTotalSNR), fFirstTrackMaxSNR(orig.fFirstTrackMaxSNR), fFirstTrackTotalNUP(orig.fFirstTrackTotalNUP), fFirstTrackMaxNUP(orig.fFirstTrackMaxNUP), fFirstTrackTotalWideSNR(orig.fFirstTrackTotalWideSNR), fFirstTrackTotalWideNUP(orig.fFirstTrackTotalWideNUP), 
             fUnknownEventTopology(orig.fUnknownEventTopology)
     {
         // this cannot be initialized in the initializer list because ROOT
