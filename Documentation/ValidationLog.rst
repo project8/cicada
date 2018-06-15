@@ -18,10 +18,10 @@ Guidelines
 Log
 ---
 
-Version: x.x.x
+Version: 1.2.0
 ~~~~~~~~~~~~~~
 
-Release Date: June 14th, 2018
+Release Date: June 15th, 2018
 ''''''''''''''''''''''''''''
 Releases:
 '''''''''
