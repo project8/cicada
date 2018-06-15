@@ -18,6 +18,27 @@ Guidelines
 Log
 ---
 
+Version: x.x.x
+~~~~~~~~~~~~~~
+
+Release Date: June 14th, 2018
+''''''''''''''''''''''''''''
+Releases:
+'''''''''
+
+* TMultiTrackEventData: adding SNR and NUP based quantities for the first track:
+    * FirstTrackTotalSNR
+    * FirstTrackMaxSNR
+    * FirstTrackTotalNUP
+    * FirstTrackMaxNUP
+    * FirstTrackTotalWideSNR
+    * FirstTrackTotalWideNUP
+
+Fixes:
+''''''
+
+* Bumping ClassDef version for TProcessedTrackData
+
 Version: 1.1.1
 ~~~~~~~~~~~~~~
 
