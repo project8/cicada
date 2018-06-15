@@ -127,6 +127,13 @@ namespace NAMESPACE
             mv_accessible(Double_t, FirstTrackSlope);
             mv_accessible(Double_t, FirstTrackIntercept);
             mv_accessible(Double_t, FirstTrackTotalPower);
+            mv_accessible(UInt_t,   FirstTrackNTrackBins);
+            mv_accessible(Double_t, FirstTrackTotalSNR);
+            mv_accessible(Double_t, FirstTrackMaxSNR);
+            mv_accessible(Double_t, FirstTrackTotalNUP);
+            mv_accessible(Double_t, FirstTrackMaxNUP);
+            mv_accessible(Double_t, FirstTrackTotalWideSNR);
+            mv_accessible(Double_t, FirstTrackTotalWideNUP);
 
             mv_accessible(Double_t, UnknownEventTopology);
 
@@ -149,7 +156,7 @@ namespace NAMESPACE
 
             std::string GetBranchName() { return std::string("Event"); } // Defines the default name of the object saved inside the output tree
 
-            ClassDef(TMultiTrackEventData, 1);
+            ClassDef(TMultiTrackEventData, 2);
     };
 
 

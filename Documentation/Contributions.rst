@@ -56,7 +56,7 @@ Contributing to the code
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you are new to the code and are willing to contribute by developing new features or maintaining the code, please refer to the `issue tracker`_.
-There are issues you can look at and decide to solve.
+There are issues you can look at and decide on solving.
 When you have found your ideal issue, please comment in the issue tracker, so the main developers are aware you are working on this.
 
 If you wish to contribute to maintaining a proper documentation, please refer to the Documentation section.
