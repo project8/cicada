@@ -34,11 +34,6 @@ Releases:
     * FirstTrackTotalWideSNR
     * FirstTrackTotalWideNUP
 
-Fixes:
-''''''
-
-* Bumping ClassDef version for TProcessedTrackData
-
 Version: 1.1.1
 ~~~~~~~~~~~~~~
 
