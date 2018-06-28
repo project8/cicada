@@ -30,7 +30,7 @@ def print_logo():
 def loadLibraries(silence=False):
     import ROOT
     if hasattr(ROOT,"Cicada"):
-        logger.debug("Libraries already loaded...")
+        # logger.debug("Libraries already loaded...")
         return
     if silence:
         print_logo()        
