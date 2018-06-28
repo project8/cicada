@@ -18,12 +18,22 @@ Guidelines
 Log
 ---
 
+Version: 1.2.1
+~~~~~~~~~~~~~~
+
+Release Date: June 27th, 2018
+''''''''''''''''''''''''''''
+Fixes:
+'''''''''
+
+* Update Scarab
+
 Version: 1.2.0
 ~~~~~~~~~~~~~~
 
 Release Date: June 15th, 2018
 ''''''''''''''''''''''''''''
-Releases:
+New Features:
 '''''''''
 
 * TMultiTrackEventData: adding SNR and NUP based quantities for the first track:
