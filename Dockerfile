@@ -37,3 +37,9 @@ RUN source $CICADA_BUILD_PREFIX/setup.sh &&\
 FROM cicada_common
 
 COPY --from=cicada_done $CICADA_BUILD_PREFIX $CICADA_BUILD_PREFIX
+
+RUN mkdir -p /tmp_install/cicada/Library &&\ 
+    ls  $CICADA_BUILD_PREFIX/include &&\ 
+    cp -r $CICADA_BUILD_PREFIX/include/Cicada/*.hh /tmp_install/cicada/Library &&\ 
+    cp -r $CICADA_BUILD_PREFIX/include/Cicada/Scarab/* /tmp_install/cicada/Library &&\ 
+    cp -r $CICADA_BUILD_PREFIX/include/Cicada/rapidjson/*  /tmp_install/cicada/Library
