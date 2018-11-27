@@ -1,5 +1,8 @@
 FROM project8/p8compute_dependencies:v0.2.0 as cicada_common
 
+ARG build_type=Release
+ENV CICADA_BUILD_TYPE=$build_type
+
 ENV CICADA_TAG=v1.2.1
 ENV CICADA_BUILD_PREFIX=/usr/local/p8/cicada/$CICADA_TAG
 
@@ -27,9 +30,12 @@ RUN source $CICADA_BUILD_PREFIX/setup.sh &&\
     git submodule update --init --recursive &&\
     mkdir build &&\
     cd build &&\
-    cmake -DCMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX:PATH=$CICADA_BUILD_PREFIX -DCMAKE_SKIP_INSTALL_RPATH:BOOL=True .. &&\
-    cmake -DCMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX:PATH=$CICADA_BUILD_PREFIX -DCMAKE_SKIP_INSTALL_RPATH:BOOL=True .. &&\
-    make -j3 &&\
+    cmake -D CMAKE_BUILD_TYPE=$CICADA_BUILD_TYPE \
+          -D CMAKE_INSTALL_PREFIX:PATH=$CICADA_BUILD_PREFIX \
+          -D CMAKE_SKIP_INSTALL_RPATH:BOOL=True .. &&\
+    cmake -D CMAKE_BUILD_TYPE=$CICADA_BUILD_TYPE \
+          -D CMAKE_INSTALL_PREFIX:PATH=$CICADA_BUILD_PREFIX \
+          -D CMAKE_SKIP_INSTALL_RPATH:BOOL=True .. &&\
     make -j3 install &&\
     /bin/true
 
@@ -37,9 +43,3 @@ RUN source $CICADA_BUILD_PREFIX/setup.sh &&\
 FROM cicada_common
 
 COPY --from=cicada_done $CICADA_BUILD_PREFIX $CICADA_BUILD_PREFIX
-
-RUN mkdir -p /tmp_install/cicada/Library &&\ 
-    ls  $CICADA_BUILD_PREFIX/include &&\ 
-    cp -r $CICADA_BUILD_PREFIX/include/Cicada/*.hh /tmp_install/cicada/Library &&\ 
-    cp -r $CICADA_BUILD_PREFIX/include/Cicada/Scarab/* /tmp_install/cicada/Library &&\ 
-    cp -r $CICADA_BUILD_PREFIX/include/Cicada/rapidjson/*  /tmp_install/cicada/Library
