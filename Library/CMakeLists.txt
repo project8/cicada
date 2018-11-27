@@ -60,3 +60,8 @@ endif( Cicada_ENABLE_KATYDID_NAMESPACE )
 pbuilder_library( Cicada CICADA_SOURCEFILES "" )
 pbuilder_install_headers( ${CICADA_HEADERFILES} )
 
+IF (Cicada_ADD_CICADA_PY)
+    pbuilder_install_files (${LIB_INSTALL_DIR}/CicadaPy ${PROJECT_SOURCE_DIR}/Library/python/CicadaPy.py)
+    pbuilder_install_files (${LIB_INSTALL_DIR}/CicadaPy ${PROJECT_SOURCE_DIR}/Library/python/__init__.py)
+    pbuilder_install_files (${LIB_INSTALL_DIR}/CicadaPy ${PROJECT_SOURCE_DIR}/Library/python/ReadKTOutputFile.py)
+ENDIF(Cicada_ADD_CICADA_PY)
