@@ -43,7 +43,7 @@ def loadLibraries(silence=False):
         print_logo()
 
     logger.debug("Import library...")
-    lib_path = os.path.join("$<TARGET_FILE_DIR:${lib_target}>", "$<TARGET_FILE_NAME:${lib_target}>")
+    lib_path = os.path.join("$<TARGET_PROPERTY:${lib_target},INSTALL_NAME_DIR>", "$<TARGET_FILE_NAME:${lib_target}>")
     logger.debug("\t->{}".format(lib_path))
     ROOT.gSystem.Load(lib_path)
 
