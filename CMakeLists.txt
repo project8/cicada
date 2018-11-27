@@ -59,10 +59,7 @@ include_directories (BEFORE
 
 add_subdirectory( Library )
 
-IF (Cicada_ADD_CICADA_PY)
-    pbuilder_install_files (. ${PROJECT_SOURCE_DIR}/Library/CicadaPy.py "")
-    pbuilder_install_files (. ${PROJECT_SOURCE_DIR}/Library/python/__init__.py "")
-    pbuilder_install_files (. ${PROJECT_SOURCE_DIR}/Library/python/ReadKTOutputFile.py "")
-ENDIF(Cicada_ADD_CICADA_PY)
+configure_file( this_cicada_root.sh.in this_cicada_root.sh )
+pbuilder_install_files( ${BIN_INSTALL_DIR} ${CMAKE_CURRENT_BINARY_DIR}/this_cicada_root.sh )
 
 pbuilder_variables_for_parent()
