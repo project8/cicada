@@ -3,7 +3,7 @@ FROM project8/p8compute_dependencies:v0.2.0 as cicada_common
 ARG build_type=Release
 ENV CICADA_BUILD_TYPE=$build_type
 
-ENV CICADA_TAG=v1.2.1
+ENV CICADA_TAG=v1.3.0
 ENV CICADA_BUILD_PREFIX=/usr/local/p8/cicada/$CICADA_TAG
 
 RUN mkdir -p $CICADA_BUILD_PREFIX &&\
