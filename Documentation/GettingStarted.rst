@@ -31,15 +31,16 @@ Or if you want to take advantage of parallel building to get things done faster:
   make -j install
 If the compiler runs into errors during the build, first check that you've updated the submodules and that you have all of the required dependencies installed (many are called "optional" on this page, but if you want to build without them you must also specify this in the cmake window). If you made a change to the dependencies or submodules, you may have to wipe the build directory and start again from step 1; simply writing `make install` again will not always work. 
 
-4. Add the build directory to your `PYTHONPATH`:
+4. Use `this_cicada.sh` to set your `PYTHONPATH` and `ROOT_INCLUDE_PATH`:
 ::
-  export PYTHONPATH=/path/to/cicada/build:$PYTHONPATH
-This will allow you to access the Python interface and the python example scripts coming with cicada. 
+  source /path/to/cicada/install/bin/this_cicada.sh
+  
+This will allow you to access the Python and ROOT interfaces and the python example scripts coming with cicada. 
 
 5. **Developpers:** Add the installation folder (where the bin and lib have been installed) path to your paths.
 ::
-  export PATH=/path/to/cicada/build/bin:$PATH
-  export LD_LIBRARY_PATH=/path/to/cicada/build/lib:$LD_LIBRARY_PATH
+  export PATH=/path/to/cicada/install/bin:$PATH
+  export LD_LIBRARY_PATH=/path/to/cicada/install/lib:$LD_LIBRARY_PATH
 
 How to use
 ~~~~~~~~~~
