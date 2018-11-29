@@ -49,14 +49,23 @@ endif( Cicada_ENABLE_KATYDID_NAMESPACE )
 
 ##################################################
 
-ROOT_GENERATE_DICTIONARY( CicadaDict ${CICADA_DICT_HEADERFILES} LINKDEF ${CICADA_LINKDEF_HEADERFILE} )
+ROOT_GENERATE_DICTIONARY( CicadaDict ${CICADA_DICT_HEADERFILES} LINKDEF ${CICADA_LINKDEF_HEADERFILE} OPTIONS -inlineInputHeader )
 pbuilder_install_files( ${LIB_INSTALL_DIR} ${CICADA_DICT_PCMFILE} )
 
 if( Cicada_ENABLE_KATYDID_NAMESPACE )
-    ROOT_GENERATE_DICTIONARY( CicadaKTDict ${CICADA_KT_DICT_HEADERFILES} LINKDEF ${CICADA_KT_LINKDEF_HEADERFILE} )
+    ROOT_GENERATE_DICTIONARY( CicadaKTDict ${CICADA_KT_DICT_HEADERFILES} LINKDEF ${CICADA_KT_LINKDEF_HEADERFILE} OPTIONS -inlineInputHeader )
     pbuilder_install_files( ${LIB_INSTALL_DIR} ${CICADA_KT_DICT_PCMFILE} )
 endif( Cicada_ENABLE_KATYDID_NAMESPACE )
 
 pbuilder_library( Cicada CICADA_SOURCEFILES "" )
 pbuilder_install_headers( ${CICADA_HEADERFILES} )
 
+if( Cicada_ADD_CICADA_PY )
+    set( lib_target Cicada${Cicada_PARENT_LIB_NAME_SUFFIX} )
+    configure_file( ${CMAKE_CURRENT_SOURCE_DIR}/python/CicadaPy.py.in ${CMAKE_CURRENT_BINARY_DIR}/CicadaPy.py.gen.in )
+    file( GENERATE OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/CicadaPy.py INPUT ${CMAKE_CURRENT_BINARY_DIR}/CicadaPy.py.gen.in )
+    
+    pbuilder_install_files( ${LIB_INSTALL_DIR}/CicadaPy ${CMAKE_CURRENT_BINARY_DIR}/CicadaPy.py )
+    pbuilder_install_files( ${LIB_INSTALL_DIR}/CicadaPy ${CMAKE_CURRENT_SOURCE_DIR}/python/__init__.py )
+    pbuilder_install_files( ${LIB_INSTALL_DIR}/CicadaPy ${CMAKE_CURRENT_SOURCE_DIR}/python/ReadKTOutputFile.py )
+endif( Cicada_ADD_CICADA_PY )

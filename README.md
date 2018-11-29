@@ -1,5 +1,8 @@
 # cicada
 
+[![DOI](https://zenodo.org/badge/112377508.svg)](https://zenodo.org/badge/latestdoi/112377508)
+[![Documentation Status](https://readthedocs.org/projects/p8-cicada/badge/?version=stable)](https://p8-cicada.readthedocs.io/en/stable/?badge=stable)
+
 Library for common processed-data file formats
 
 ## Description
