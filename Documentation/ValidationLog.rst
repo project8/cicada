@@ -18,11 +18,24 @@ Guidelines
 Log
 ---
 
+Version: 1.3.0
+~~~~~~~~~~~~~~
+
+Release Date: Nov 29, 2018
+'''''''''''''''''''''''''''''
+New Features:
+'''''''''''''
+
+* New Dockerfile based on the p8compute-dependencies container
+* Added this_cicada.sh script to properly set ROOT include path and python path
+* Fixed the ROOT dictionary build so that it doesn't hard-code source-tree paths
+
+
 Version: 1.2.1
 ~~~~~~~~~~~~~~
 
 Release Date: June 27th, 2018
-''''''''''''''''''''''''''''
+'''''''''''''''''''''''''''''
 Fixes:
 '''''''''
 
@@ -32,9 +45,9 @@ Version: 1.2.0
 ~~~~~~~~~~~~~~
 
 Release Date: June 15th, 2018
-''''''''''''''''''''''''''''
+'''''''''''''''''''''''''''''
 New Features:
-'''''''''
+''''''''''''''
 
 * TMultiTrackEventData: adding SNR and NUP based quantities for the first track:
     * FirstTrackNTrackBins

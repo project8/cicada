@@ -1,5 +1,8 @@
 # cicada
 
+[![DOI](https://zenodo.org/badge/112377508.svg)](https://zenodo.org/badge/latestdoi/112377508)
+[![Documentation Status](https://readthedocs.org/projects/p8-cicada/badge/?version=stable)](https://p8-cicada.readthedocs.io/en/stable/?badge=stable)
+
 Library for common processed-data file formats
 
 ## Description
@@ -82,9 +85,8 @@ The following steps will build Cicada from scratch.  Starting with a terminal wi
   - `export PATH=/path/to/install/folder/bin:$PATH`
   - `export LD_LIBRARY_PATH=/path/to/install/folder/lib:$LD_LIBRARY_PATH`
 
-5. **Python interface:** Most people want to use the python interface.
-For that, add the installation folder in your `$PYTHONPATH` (either in your `.bash_profile` or in the terminal):
-  - `export PYTHONPATH=/path/to/install/folder:$PYTHONPATH`
+5. **Python and ROOT interfaces:** To set necessary paths correctly, source the `this_cicada.sh` script:
+  - `source /path/to/install/folder/bin/this_cicada.sh`
 
 ## Docker
 
@@ -97,9 +99,10 @@ Then start a container:
 ```
 $ docker start -it project8/cicada:latest bash
 ```
-Finally before using python or Cicada or ROOT in this container, use the environment setup script
+Finally before using python or Cicada or ROOT in this container, use the environment setup script and the `this_cicada.sh` script
 ```
-root@sdfafd8shusd$ source /setup.sh
+root@sdfafd8shusd$ source $CICADA_BUILD_PREFIX/setup.sh
+root@sdfafd8shusd$ source $CICADA_BUILD_PREFIX/bin/this_cicada.sh
 ```
 
 You should now be able to use Cicada:

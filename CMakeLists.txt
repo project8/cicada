@@ -10,7 +10,7 @@ cmake_minimum_required (VERSION 3.1)
 #########
 
 cmake_policy( SET CMP0048 NEW ) # version in project()
-project( Cicada VERSION 1.2.1 )
+project( Cicada VERSION 1.3.0 )
 
 list( APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/Scarab/cmake )
 include( PackageBuilder )
@@ -59,10 +59,7 @@ include_directories (BEFORE
 
 add_subdirectory( Library )
 
-IF (Cicada_ADD_CICADA_PY)
-    pbuilder_install_files (. ${PROJECT_SOURCE_DIR}/Library/CicadaPy.py "")
-    pbuilder_install_files (. ${PROJECT_SOURCE_DIR}/Library/python/__init__.py "")
-    pbuilder_install_files (. ${PROJECT_SOURCE_DIR}/Library/python/ReadKTOutputFile.py "")
-ENDIF(Cicada_ADD_CICADA_PY)
+configure_file( this_cicada.sh.in this_cicada.sh )
+pbuilder_install_files( ${BIN_INSTALL_DIR} ${CMAKE_CURRENT_BINARY_DIR}/this_cicada.sh )
 
 pbuilder_variables_for_parent()
