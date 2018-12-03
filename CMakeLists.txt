@@ -23,7 +23,6 @@ pbuilder_prepare_project()
 
 option( Cicada_ENABLE_KATYDID_NAMESPACE "Build an additional library with the Cicada classes defined additionally in the Katydid namespace" ON )
 option (Cicada_ADD_CICADA_PY "Add PhylloxeraPy file in the build" ON )
-  
 
 ######################
 # Cicada dependencies #
@@ -32,6 +31,12 @@ option (Cicada_ADD_CICADA_PY "Add PhylloxeraPy file in the build" ON )
 ########
 # Scarab
 ########
+
+set_option( Scarab_BUILD_CODEC_JSON OFF )
+set_option( Scarab_BUILD_CODEC_YAML OFF )
+set_option( Scarab_BUILD_AUTHENTICATION OFF )
+set_option( Scarab_BUILD_PARAM OFF )
+set_option( Scarab_ENABLE_EXECUTABLES OFF )
 
 pbuilder_add_submodule( Scarab Scarab/library )
 

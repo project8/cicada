@@ -18,6 +18,17 @@ Guidelines
 Log
 ---
 
+Version: 
+~~~~~~~~~~~~~~
+
+Release Date:  
+'''''''''''''''''''''''''''''
+Fixes:
+'''''''''''''
+
+* Removing unused libraries (yaml, json, param) from build
+
+
 Version: 1.3.0
 ~~~~~~~~~~~~~~
 
