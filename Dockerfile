@@ -19,15 +19,15 @@ RUN mkdir -p $CICADA_BUILD_PREFIX &&\
 ########################
 FROM cicada_common as cicada_done
 
+COPY Library /tmp_source/Library
+COPY Scarab /tmp_source/Scarab
+COPY CMakeLists.txt /tmp_source/CMakeLists.txt
+COPY this_cicada.sh.in /tmp_source/this_cicada.sh.in
+COPY .git /tmp_source/.git
+
 # repeat the cmake command to get the change of install prefix to set correctly (a package_builder known issue)
 RUN source $CICADA_BUILD_PREFIX/setup.sh &&\
-    mkdir /tmp_install &&\
-    cd /tmp_install &&\
-    git clone https://github.com/project8/cicada &&\
-    cd cicada &&\
-    git fetch && git fetch --tags &&\
-    git checkout $CICADA_TAG &&\
-    git submodule update --init --recursive &&\
+    cd /tmp_source &&\
     mkdir build &&\
     cd build &&\
     cmake -D CMAKE_BUILD_TYPE=$CICADA_BUILD_TYPE \
