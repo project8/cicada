@@ -18,15 +18,17 @@ Guidelines
 Log
 ---
 
-Version: 
+Version: 1.3.1
 ~~~~~~~~~~~~~~
 
-Release Date:  
+Release Date: Dec 5, 2018 
 '''''''''''''''''''''''''''''
+
 Fixes:
 '''''''''''''
 
 * Removing unused libraries (yaml, json, param) from build
+* Switched docker build to use COPY instead of git clone
 
 
 Version: 1.3.0
