@@ -18,6 +18,18 @@ Guidelines
 Log
 ---
 
+Version: 1.3.2
+~~~~~~~~~~~~~~
+
+Release Date: Dec 6, 2018 
+'''''''''''''''''''''''''''''
+
+Fixes:
+'''''''''''''
+
+* New docker dependencies
+
+
 Version: 1.3.1
 ~~~~~~~~~~~~~~
 
