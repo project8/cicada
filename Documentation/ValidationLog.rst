@@ -18,6 +18,18 @@ Guidelines
 Log
 ---
 
+Version: v1.3.3
+~~~~~~~~~~~~~~~
+
+Release Date: March 28th 2019
+'''''''''''''''''''''''''''''
+
+Fixes:
+'''''''''''''
+
+* ReadKTOutput: Avoid crash when object doesn't exist in file
+
+
 Version: 1.3.2
 ~~~~~~~~~~~~~~
 
