@@ -32,6 +32,10 @@ def ReadKTOutputFile(filename,var,katydid=False,objectType="TMultiTrackEventData
     # names[0]: name of the tree
     # names[1]: name of the object in the tree
     names = name.split(":")
+    # Check if tree is in file
+    if not file.GetListOfKeys().Contains(str(names[0])):
+        print("Error: no tree {} in file".format(str(names[0])))
+        return {}
     # Extract tree from file
     tree = file.Get(str(names[0]))
     # Create TTreeReader
