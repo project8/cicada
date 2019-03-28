@@ -18,10 +18,10 @@ Guidelines
 Log
 ---
 
-Version: 
-~~~~~~~~~~~~~~
+Version: v1.3.3
+~~~~~~~~~~~~~~~
 
-Release Date: 
+Release Date: March 28th 2019
 '''''''''''''''''''''''''''''
 
 Fixes:
