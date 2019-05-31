@@ -14,6 +14,7 @@ RUN mkdir -p $CICADA_BUILD_PREFIX &&\
     echo 'ln -sf $CICADA_BUILD_PREFIX $CICADA_BUILD_PREFIX/../current || /bin/true' >> setup.sh &&\
     echo 'export PATH=$CICADA_BUILD_PREFIX/bin:$PATH' >> setup.sh &&\
     echo 'export LD_LIBRARY_PATH=$CICADA_BUILD_PREFIX/lib:$LD_LIBRARY_PATH' >> setup.sh &&\
+    echo 'export PYTHONPATH=$CICADA_BUILD_PREFIX/lib/CicadaPy:$PYTHONPATH' >> setup.sh &&\
     /bin/true
 
 ########################
