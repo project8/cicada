@@ -1,10 +1,16 @@
-FROM project8/p8compute_dependencies:v0.3.0 as cicada_common
+FROM project8/p8compute_dependencies:v1.0.0 as cicada_common
 
 ARG build_type=Release
 ENV CICADA_BUILD_TYPE=$build_type
 
-ENV CICADA_TAG=v1.3.2
-ENV CICADA_BUILD_PREFIX=/usr/local/p8/cicada/$CICADA_TAG
+ARG cicada_tag=test
+ENV CICADA_TAG=$cicada_tag
+
+ARG build_prefix=/usr/local/p8/cicada/$CICADA_TAG
+ENV CICADA_BUILD_PREFIX=$build_prefix
+
+ARG cicada_enable_executables=false
+ENV CICADA_ENABLE_EXECUTABLES=$cicada_enable_executables
 
 RUN mkdir -p $CICADA_BUILD_PREFIX &&\
     cd $CICADA_BUILD_PREFIX &&\
@@ -22,6 +28,7 @@ FROM cicada_common as cicada_done
 
 COPY Library /tmp_source/Library
 COPY Scarab /tmp_source/Scarab
+COPY CicadaConfig.cmake.in /tmp_source/CicadaConfig.cmake.in
 COPY CMakeLists.txt /tmp_source/CMakeLists.txt
 COPY this_cicada.sh.in /tmp_source/this_cicada.sh.in
 COPY .git /tmp_source/.git
@@ -33,9 +40,11 @@ RUN source $CICADA_BUILD_PREFIX/setup.sh &&\
     cd build &&\
     cmake -D CMAKE_BUILD_TYPE=$CICADA_BUILD_TYPE \
           -D CMAKE_INSTALL_PREFIX:PATH=$CICADA_BUILD_PREFIX \
+          -D Cicada_ENABLE_EXECUTABLES:BOOL=$CICADA_ENABLE_EXECUTABLES \
           -D CMAKE_SKIP_INSTALL_RPATH:BOOL=True .. &&\
     cmake -D CMAKE_BUILD_TYPE=$CICADA_BUILD_TYPE \
           -D CMAKE_INSTALL_PREFIX:PATH=$CICADA_BUILD_PREFIX \
+          -D Cicada_ENABLE_EXECUTABLES:BOOL=$CICADA_ENABLE_EXECUTABLES \
           -D CMAKE_SKIP_INSTALL_RPATH:BOOL=True .. &&\
     make -j3 install &&\
     /bin/true
