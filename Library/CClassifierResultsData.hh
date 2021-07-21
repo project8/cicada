@@ -6,6 +6,9 @@
  @date Mar 22, 2018
  */
 
+#ifndef CICADA_CCLASSIFIERRESULTS_HH_
+#define CICADA_CCLASSIFIERRESULTS_HH_
+
 #include "CMemberVariables.hh"
 
 #include "TObject.h"
@@ -46,4 +49,6 @@ namespace Cicada
             ClassDef(TClassifierResultsData, 1);
     };
 
-}
+} /* namespace Cicada */
+
+#endif /* CICADA_CCLASSIFIERRESULTS_HH_ */

@@ -6,6 +6,9 @@
  @date Mar 22, 2018
  */
 
+#ifndef CICADA_CPROCESSEDMPTDATA_HH_
+#define CICADA_CPROCESSEDMPTDATA_HH_
+
 #include "CMemberVariables.hh"
 #include "CROOTData.hh"
 
@@ -53,3 +56,5 @@ namespace Cicada
     };
 
 }
+
+#endif /* CICADA_CPROCESSEDMPTDATA_HH_ */

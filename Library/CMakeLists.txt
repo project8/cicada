@@ -2,18 +2,14 @@
 # Author: N. Oblath
 # Date: Jan 15, 2018
 
+include_directories( ${CMAKE_CURRENT_SOURCE_DIR} )
 
 set( CICADA_DICT_HEADERFILES
-    _CROOTData.hh
     CClassifierResultsData.hh
     CMemberVariables.hh
     CMTEWithClassifierResultsData.hh
     CProcessedMPTData.hh
     CROOTData.hh
-)
-
-set( CICADA_HEADERFILES
-    ${CICADA_DICT_HEADERFILES}
 )
 
 set( CICADA_SOURCEFILES
@@ -24,41 +20,29 @@ set( CICADA_SOURCEFILES
 )
 
 set( CICADA_LINKDEF_HEADERFILE LinkDef/CicadaLinkDef.hh )
-set( CICADA_SOURCEFILES ${CICADA_SOURCEFILES} ${CMAKE_CURRENT_BINARY_DIR}/CicadaDict.cxx )
-set( CICADA_DICT_PCMFILE ${CMAKE_CURRENT_BINARY_DIR}/CicadaDict_rdict.pcm )
-
-if( Cicada_ENABLE_KATYDID_NAMESPACE )
-    set( CICADA_KT_DICT_HEADERFILES
-        KTROOTData.hh
-    )
-    
-    set( CICADA_HEADERFILES
-        ${CICADA_HEADERFILES}
-        ${CICADA_KT_DICT_HEADERFILES}
-    )
-    
-    set( CICADA_SOURCEFILES
-        ${CICADA_SOURCEFILES}
-        KTROOTData.cc
-    )
-    
-    set( CICADA_KT_LINKDEF_HEADERFILE LinkDef/CicadaKTLinkDef.hh )
-    set( CICADA_SOURCEFILES ${CICADA_SOURCEFILES} ${CMAKE_CURRENT_BINARY_DIR}/CicadaKTDict.cxx )
-    set( CICADA_KT_DICT_PCMFILE ${CMAKE_CURRENT_BINARY_DIR}/CicadaKTDict_rdict.pcm )
-endif( Cicada_ENABLE_KATYDID_NAMESPACE )
 
 ##################################################
 
-ROOT_GENERATE_DICTIONARY( CicadaDict ${CICADA_DICT_HEADERFILES} LINKDEF ${CICADA_LINKDEF_HEADERFILE} OPTIONS -inlineInputHeader )
-pbuilder_install_files( ${LIB_INSTALL_DIR} ${CICADA_DICT_PCMFILE} )
+pbuilder_add_library( 
+    TARGET Cicada 
+    SOURCES ${CICADA_SOURCEFILES} ${ADDITIONAL_SOURCES}
+)
 
-if( Cicada_ENABLE_KATYDID_NAMESPACE )
-    ROOT_GENERATE_DICTIONARY( CicadaKTDict ${CICADA_KT_DICT_HEADERFILES} LINKDEF ${CICADA_KT_LINKDEF_HEADERFILE} OPTIONS -inlineInputHeader )
-    pbuilder_install_files( ${LIB_INSTALL_DIR} ${CICADA_KT_DICT_PCMFILE} )
-endif( Cicada_ENABLE_KATYDID_NAMESPACE )
+set( dict_name CicadaDict )
+message( STATUS "Generating ROOT dictionary <${dict_name}>")
+ROOT_GENERATE_DICTIONARY( ${dict_name} ${CICADA_DICT_HEADERFILES} MODULE Cicada LINKDEF ${CICADA_LINKDEF_HEADERFILE} OPTIONS -inlineInputHeader )
 
-pbuilder_library( Cicada CICADA_SOURCEFILES "" )
-pbuilder_install_headers( ${CICADA_HEADERFILES} )
+pbuilder_link_library( 
+    TARGET Cicada 
+    PUBLIC_EXTERNAL_LIBRARIES ${PUBLIC_EXT_LIBS}
+)
+
+pbuilder_component_install_and_export( 
+    COMPONENT Library
+    LIBTARGETS Cicada
+)
+
+pbuilder_install_headers( ${CICADA_DICT_HEADERFILES} )
 
 if( Cicada_ADD_CICADA_PY )
     set( lib_target Cicada${Cicada_PARENT_LIB_NAME_SUFFIX} )
