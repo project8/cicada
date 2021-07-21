@@ -18,6 +18,20 @@ Guidelines
 Log
 ---
 
+Version: v1.4.0
+~~~~~~~~~~~~~~~
+
+Release Date: July 21, 2021
+'''''''''''''''''''''''''''''
+
+New Features:
+'''''''''''''
+
+* Updated Scarab to v3.6.1
+* Modernized CMake build
+* Removed Katydid namespace classes
+
+
 Version: v1.3.3
 ~~~~~~~~~~~~~~~
 

@@ -1,0 +1,15 @@
+# CicadaConfig.cmake
+
+get_filename_component( Cicada_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH )
+
+include( CMakeFindDependencyMacro )
+find_dependency( Scarab REQUIRED PATHS ${Cicada_CMAKE_DIR}/Scarab @Scarab_BINARY_LOCATION@ )
+find_dependency( ROOT REQUIRED COMPONENTS Tree )
+
+if( NOT TARGET Cicada::@Cicada_FULL_TARGET_NAME@ )
+    if( TARGET @Cicada_FULL_TARGET_NAME@ )
+        add_library( Cicada::@Cicada_FULL_TARGET_NAME@ ALIAS @Cicada_FULL_TARGET_NAME@ )
+    else()
+        include("${Cicada_CMAKE_DIR}/Cicada_Library_Targets.cmake")
+    endif()
+endif()

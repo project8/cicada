@@ -2,20 +2,18 @@
 # Author: N. Oblath
 # Date: Jan 15, 2018
 
-# Minimum cmake verison 3.1 required for the variable CMAKE_CXX_STANDARD
-cmake_minimum_required (VERSION 3.1)
+# Minimum cmake verison 3.12 required by Scarab
+cmake_minimum_required (VERSION 3.12)
 
 #########
 # Setup #
 #########
 
 cmake_policy( SET CMP0048 NEW ) # version in project()
-project( Cicada VERSION 1.3.3 )
+project( Cicada VERSION 1.4.0 )
 
 list( APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/Scarab/cmake )
 include( PackageBuilder )
-
-pbuilder_prepare_project()
 
 #################
 # Cicada options #
@@ -24,47 +22,65 @@ pbuilder_prepare_project()
 option( Cicada_ENABLE_KATYDID_NAMESPACE "Build an additional library with the Cicada classes defined additionally in the Katydid namespace" ON )
 option (Cicada_ADD_CICADA_PY "Add PhylloxeraPy file in the build" ON )
 
-######################
+if( PBUILDER_STANDALONE )
+    set_option( Scarab_BUILD_CODEC_JSON OFF )
+    set_option( Scarab_BUILD_CODEC_YAML OFF )
+    set_option( Scarab_BUILD_AUTHENTICATION OFF )
+    set_option( Scarab_BUILD_CLI OFF )
+    set_option( Scarab_BUILD_PARAM OFF )
+    set_option( Scarab_ENABLE_EXECUTABLES OFF )
+endif()
+
+#######################
 # Cicada dependencies #
-######################
+#######################
 
-########
-# Scarab
-########
-
-set_option( Scarab_BUILD_CODEC_JSON OFF )
-set_option( Scarab_BUILD_CODEC_YAML OFF )
-set_option( Scarab_BUILD_AUTHENTICATION OFF )
-set_option( Scarab_BUILD_PARAM OFF )
-set_option( Scarab_ENABLE_EXECUTABLES OFF )
-
-pbuilder_add_submodule( Scarab Scarab/library )
+set( PUBLIC_EXT_LIBS )
 
 ######
 # ROOT
 ######
 
-find_package (ROOT 6.00)
-if (ROOT_FOUND)
-    pbuilder_add_ext_libraries (${ROOT_LIBRARIES})
-    #message(STATUS "${ROOT_LIBRARIES}")
-else (ROOT_FOUND)
-    message(FATAL "Unable to find ROOT")
-endif (ROOT_FOUND)
-include_directories (${ROOT_INCLUDE_DIR})
+set( root_components Tree )
+list( APPEND PUBLIC_EXT_LIBS ROOT::Tree )
+if( Cicada_ENABLE_EXECUTABLES )
+    list( APPEND root_components RIO )
+    list( APPEND PUBLIC_EXT_LIBS ROOT::RIO )
+endif()
+find_package( ROOT 6.20 REQUIRED CONFIG COMPONENTS ${root_components} )
 
+#####################
+# Prepare for build #
+#####################
+
+pbuilder_prepare_project()
+
+##############
+# Submodules #
+##############
+
+pbuilder_add_submodule( Scarab Scarab )
+
+# all parts of Cicada use Scarab, so include it here
+pbuilder_use_sm_library( Scarab Scarab )
 
 ################
 # Build Cicada #
 ################
 
-include_directories (BEFORE 
-    ${PROJECT_SOURCE_DIR}/Library
-)
-
 add_subdirectory( Library )
 
-configure_file( this_cicada.sh.in this_cicada.sh )
-pbuilder_install_files( ${BIN_INSTALL_DIR} ${CMAKE_CURRENT_BINARY_DIR}/this_cicada.sh )
+if( Cicada_ENABLE_EXECUTABLES )
+    add_subdirectory( Executables )
+endif()
 
-pbuilder_variables_for_parent()
+#configure_file( this_cicada.sh.in this_cicada.sh )
+#pbuilder_install_files( ${BIN_INSTALL_DIR} ${CMAKE_CURRENT_BINARY_DIR}/this_cicada.sh )
+
+##################
+# Package Config #
+##################
+
+configure_file( ${PROJECT_SOURCE_DIR}/CicadaConfig.cmake.in ${CMAKE_CURRENT_BINARY_DIR}/CicadaConfig.cmake @ONLY )
+
+pbuilder_do_package_config()
