@@ -13,7 +13,7 @@
 
 #include "TFile.h"
 #include "TTree.h"
-#include "KTROOTData.hh"
+#include "CROOTData.hh"
 
 LOGGER(bt, "BasicTest");
 
@@ -30,7 +30,7 @@ int main(int argc, char *argv[]){
 	myFile->GetObject("multiTrackEvents", myTree);
 
 	// Change Katydid into Cicada if necessary
-	Katydid::TMultiTrackEventData *myEvent = 0;
+	Cicada::TMultiTrackEventData *myEvent = 0;
 	myTree->SetBranchAddress("Event", &myEvent);
 	for( int i=0; i<myTree->GetEntries(); ++i) {
 		myTree->GetEntry(i);
