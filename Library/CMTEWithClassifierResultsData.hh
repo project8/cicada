@@ -6,6 +6,9 @@
  @date Mar 22, 2018
  */
 
+#ifndef CICADA_CMTEWITHCLASSIFIERRESULTSDATA_HH_
+#define CICADA_CMTEWITHCLASSIFIERRESULTSDATA_HH_
+
 #include "TObject.h"
 #include "TClonesArray.h"
 
@@ -46,4 +49,6 @@ namespace Cicada
             ClassDef(TMTEWithClassifierResultsData, 1);
     };
 
-}
+} /* namespace Cicada */
+
+#endif /* CICADA_CMTEWITHCLASSIFIERRESULTSDATA_HH_ */
