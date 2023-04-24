@@ -13,8 +13,6 @@ set( Cicada_LIBS
     Cicada
 )
 
-pbuilder_executables( programs all_libs )
-
 set( Cicada_PROGRAMS )
 pbuilder_executables( 
     SOURCES ${Cicada_EXE_SOURCES}
