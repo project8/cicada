@@ -23,19 +23,19 @@ set( CICADA_LINKDEF_HEADERFILE LinkDef/CicadaLinkDef.hh )
 
 ##################################################
 
-pbuilder_add_library( 
-    TARGET Cicada 
+set( lib_name Cicada )
+pbuilder_expand_lib_name( ${lib_name} )
+set( full_lib_name ${FULL_LIB_NAME} )
+pbuilder_library(
+    TARGET ${lib_name}
     SOURCES ${CICADA_SOURCEFILES} ${ADDITIONAL_SOURCES}
+    PUBLIC_EXTERNAL_LIBRARIES ${PUBLIC_EXT_LIBS}
 )
 
 set( dict_name CicadaDict )
 message( STATUS "Generating ROOT dictionary <${dict_name}>")
-ROOT_GENERATE_DICTIONARY( ${dict_name} ${CICADA_DICT_HEADERFILES} MODULE Cicada LINKDEF ${CICADA_LINKDEF_HEADERFILE} OPTIONS -inlineInputHeader )
-
-pbuilder_link_library( 
-    TARGET Cicada 
-    PUBLIC_EXTERNAL_LIBRARIES ${PUBLIC_EXT_LIBS}
-)
+ROOT_GENERATE_DICTIONARY( ${dict_name} ${CICADA_DICT_HEADERFILES} MODULE ${full_lib_name} LINKDEF ${CICADA_LINKDEF_HEADERFILE} OPTIONS -inlineInputHeader )
+pbuilder_install_files (${LIB_INSTALL_DIR} ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_SHARED_LIBRARY_PREFIX}${full_lib_name}_rdict.pcm)
 
 pbuilder_component_install_and_export( 
     COMPONENT Library
