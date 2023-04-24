@@ -21,6 +21,19 @@ Log
 Version: v1.4.0
 ~~~~~~~~~~~~~~~
 
+Release Date: Apr 24, 2023
+'''''''''''''''''''''''''''''
+
+Fixes:
+'''''''''''''
+
+* Updated Scarab to v3.9.4
+* Fixed new CMake build
+
+
+Version: v1.4.0
+~~~~~~~~~~~~~~~
+
 Release Date: July 21, 2021
 '''''''''''''''''''''''''''''
 
