@@ -23,7 +23,7 @@ namespace NAMESPACE
 
     TProcessedTrackData::TProcessedTrackData() :
             TObject(),
-            fComponent(0), fAcquisitionID(0), fTrackID(0), fEventID(0), fEventSequenceID(-1), fIsCut(false),
+            fComponent(0), fAcquisitionID(0), fTrackID(0), fEventID(0), fEventSequenceID(-1), fFilename(""), fIsCut(false),
             fStartTimeInRunC(0.), fStartTimeInAcq(0.), fEndTimeInRunC(0.),fTimeLength(0.),
             fStartFrequency(0.), fEndFrequency(0.), fFrequencyWidth(0.),
             fSlope(0.), fIntercept(0.), fTotalPower(0.),
@@ -35,7 +35,7 @@ namespace NAMESPACE
 
     TProcessedTrackData::TProcessedTrackData(const TProcessedTrackData& orig) :
             TObject(orig),
-            fComponent(orig.fComponent), fAcquisitionID(orig.fAcquisitionID), fTrackID(orig.fTrackID), fEventID(orig.fEventID), fEventSequenceID(orig.fEventSequenceID), fIsCut(orig.fIsCut),
+            fComponent(orig.fComponent), fAcquisitionID(orig.fAcquisitionID), fTrackID(orig.fTrackID), fEventID(orig.fEventID), fEventSequenceID(orig.fEventSequenceID), fFilename(orig.fFilename), fIsCut(orig.fIsCut),
             fStartTimeInRunC(orig.fStartTimeInRunC), fStartTimeInAcq(orig.fStartTimeInAcq), fEndTimeInRunC(orig.fEndTimeInRunC),fTimeLength(orig.fTimeLength),
             fStartFrequency(orig.fStartFrequency), fEndFrequency(orig.fEndFrequency), fFrequencyWidth(orig.fFrequencyWidth),
             fSlope(orig.fSlope), fIntercept(orig.fIntercept), fTotalPower(orig.fTotalPower),
@@ -56,7 +56,7 @@ namespace NAMESPACE
 
     TProcessedTrackData& TProcessedTrackData::operator=(const TProcessedTrackData& rhs)
     {
-        fComponent = rhs.fComponent; fAcquisitionID = rhs.fAcquisitionID; fTrackID = rhs.fTrackID; fEventID = rhs.fEventID; fEventSequenceID = rhs.fEventSequenceID; fIsCut = rhs.fIsCut;
+        fComponent = rhs.fComponent; fAcquisitionID = rhs.fAcquisitionID; fTrackID = rhs.fTrackID; fEventID = rhs.fEventID; fEventSequenceID = rhs.fEventSequenceID; fFilename = rhs.fFilename; fIsCut = rhs.fIsCut;
         fStartTimeInRunC = rhs.fStartTimeInRunC; fStartTimeInAcq = rhs.fStartTimeInAcq; fEndTimeInRunC = rhs.fEndTimeInRunC;fTimeLength = rhs.fTimeLength;
         fStartFrequency = rhs.fStartFrequency; fEndFrequency = rhs.fEndFrequency; fFrequencyWidth = rhs.fFrequencyWidth;
         fSlope = rhs.fSlope; fIntercept = rhs.fIntercept; fTotalPower = rhs.fTotalPower;
@@ -72,7 +72,7 @@ namespace NAMESPACE
     //************************
 
     TMultiTrackEventData::TMultiTrackEventData() :
-            fComponent(0), fAcquisitionID(0), fEventID(0), fTotalEventSequences(0),
+            fComponent(0), fAcquisitionID(0), fEventID(0), fTotalEventSequences(0), fFilename(""),
             fStartTimeInRunC(0.), fStartTimeInAcq(0.), fEndTimeInRunC(0.),fTimeLength(0.),
             fStartFrequency(0.), fEndFrequency(0.), fMinimumFrequency(0.), fMaximumFrequency(0.), fFrequencyWidth(0.),
             fStartTimeInRunCSigma(0.), fEndTimeInRunCSigma(0.), fTimeLengthSigma(0.),
@@ -87,7 +87,7 @@ namespace NAMESPACE
     }
 
     TMultiTrackEventData::TMultiTrackEventData(const TMultiTrackEventData& orig) :
-            fComponent(orig.fComponent), fAcquisitionID(orig.fAcquisitionID), fEventID(orig.fEventID), fTotalEventSequences(orig.fTotalEventSequences),
+            fComponent(orig.fComponent), fAcquisitionID(orig.fAcquisitionID), fEventID(orig.fEventID), fTotalEventSequences(orig.fTotalEventSequences), fFilename(orig.fFilename),
             fStartTimeInRunC(orig.fStartTimeInRunC), fStartTimeInAcq(orig.fStartTimeInAcq), fEndTimeInRunC(orig.fEndTimeInRunC),fTimeLength(orig.fTimeLength),
             fStartFrequency(orig.fStartFrequency), fEndFrequency(orig.fEndFrequency), fMinimumFrequency(orig.fMaximumFrequency), fMaximumFrequency(orig.fMinimumFrequency), fFrequencyWidth(orig.fFrequencyWidth),
             fStartTimeInRunCSigma(orig.fStartTimeInRunCSigma), fEndTimeInRunCSigma(orig.fEndTimeInRunCSigma), fTimeLengthSigma(orig.fTimeLengthSigma),
@@ -113,7 +113,7 @@ namespace NAMESPACE
 
     TMultiTrackEventData& TMultiTrackEventData::operator=(const TMultiTrackEventData& rhs)
     {
-        fComponent = rhs.fComponent; fAcquisitionID = rhs.fAcquisitionID; fEventID = rhs.fEventID; fTotalEventSequences = rhs.fTotalEventSequences;
+        fComponent = rhs.fComponent; fAcquisitionID = rhs.fAcquisitionID; fEventID = rhs.fEventID; fTotalEventSequences = rhs.fTotalEventSequences; fFilename = rhs.fFilename;
         fStartTimeInRunC = rhs.fStartTimeInRunC; fStartTimeInAcq = rhs.fStartTimeInAcq; fEndTimeInRunC = rhs.fEndTimeInRunC;fTimeLength = rhs.fTimeLength;
         fStartFrequency = rhs.fStartFrequency; fEndFrequency = rhs.fEndFrequency; fMinimumFrequency = rhs.fMinimumFrequency; fMaximumFrequency = rhs.fMaximumFrequency; fFrequencyWidth = rhs.fFrequencyWidth;
         fStartTimeInRunCSigma = rhs.fStartTimeInRunCSigma; fEndTimeInRunCSigma = rhs.fEndTimeInRunCSigma; fTimeLengthSigma = rhs.fTimeLengthSigma;

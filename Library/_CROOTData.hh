@@ -35,6 +35,7 @@ namespace NAMESPACE
             mv_accessible(UInt_t, TrackID);
             mv_accessible(UInt_t, EventID);
             mv_accessible(Int_t, EventSequenceID);
+            mv_accessible(std::string, Filename);
 
             mv_accessible(Bool_t, IsCut);
 
@@ -103,6 +104,7 @@ namespace NAMESPACE
             mv_accessible(UInt_t, AcquisitionID);
             mv_accessible(UInt_t, EventID);
             mv_accessible(UInt_t, TotalEventSequences);
+            mv_accessible(std::string, Filename);
 
             mv_accessible(Double_t, StartTimeInRunC);
             mv_accessible(Double_t, StartTimeInAcq);
